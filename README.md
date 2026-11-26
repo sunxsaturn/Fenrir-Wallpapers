@@ -47,7 +47,7 @@ The publisher does not grant permission, invent rights evidence, authorize downl
 
 ## Storage policy
 
-The publisher uses a conservative **900 MiB Git object budget** and a **45 MiB per-image ceiling**. It skips duplicate SHA-256 content and stops before exceeding the budget. Git history is permanent: deleting an image in a later commit does not reclaim its historical storage. Do not repeatedly replace or recompress published files; add new content as new immutable files.
+The publisher and automatic importer use a conservative **900 MiB Git object budget**. New images are capped at **45 MiB** each and duplicate SHA-256 content is skipped. One image from the initial import is approximately 69.5 MiB (below GitHub's 100 MB hard per-file limit, but above its 50 MB recommendation); it remains in history rather than rewriting the public branch. All later imports enforce the 45 MiB cap. The importer stops before exceeding the repository budget. Git history is permanent: deleting an image in a later commit does not reclaim its historical storage. Do not repeatedly replace or recompress published files; add new content as new immutable files.
 
 This repository is public. Every committed image must be suitable for public redistribution under its documented terms.
 
