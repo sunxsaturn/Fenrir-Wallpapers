@@ -51,4 +51,15 @@ jobs:
           git commit -m "chore: add verified Commons wallpapers"
           git fetch origin main
           git rebase origin/main
-          git push origin HEAD:main
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; retrying after reconnect."
+            if git fetch origin main; then
+              git rebase origin/main
+            fi
+            sleep $((attempt * 15))
+          done
+          echo "Unable to push wallpaper batch after five attempts." >&2
+          exit 1
