@@ -334,7 +334,7 @@ def main() -> int:
         rejected[reason] = rejected.get(reason, 0) + 1
 
     for category, queries in CATEGORIES.items():
-        if len(accepted) >= args.max_new_images:
+        if len(accepted) >= args.max_new_images or added_bytes >= MAX_DOWNLOAD_BYTES_PER_RUN:
             break
         state = search_state.get(category, {})
         if not isinstance(state, dict):
@@ -356,7 +356,7 @@ def main() -> int:
         for page in pages:
             if len(accepted) >= args.max_new_images or category_added >= PER_CATEGORY_LIMIT:
                 break
-            if download_attempts >= MAX_DOWNLOAD_ATTEMPTS_PER_RUN:
+            if download_attempts >= MAX_DOWNLOAD_ATTEMPTS_PER_RUN or added_bytes >= MAX_DOWNLOAD_BYTES_PER_RUN:
                 break
             title = page.get("title")
             infos = page.get("imageinfo")
@@ -417,6 +417,9 @@ def main() -> int:
             download_attempts += 1
             try:
                 payload = image_bytes(image_url)
+                if len(payload) > MAX_DOWNLOAD_BYTES_PER_RUN - added_bytes:
+                    reject("run_download_budget_reached")
+                    break
                 real_width, real_height, colors = validate_image(payload, mime)
             except Exception as exc:
                 reject("download_or_validation_failed")
