@@ -14,7 +14,12 @@ The manifest at `manifest/index.json` records each image's SHA-256, dimensions, 
 
 The Catalog database and quarantine are private local data and must never be committed. This repository includes a publisher that reads the Catalog's human-accepted manifest and exports only assets with a separate, explicit public-redistribution approval.
 
-1. Clone this repository on the machine holding the local Catalog database and quarantine.
+1. Clone this repository on the machine holding the local Catalog database and quarantine, then enter it:
+
+   ```bash
+   git clone --depth=1 https://github.com/sunxsaturn/Fenrir-Wallpapers.git ~/Pictures/Fenrir-Wallpapers
+   cd ~/Pictures/Fenrir-Wallpapers
+   ```
 2. Copy `manifest/publication-approvals.example.json` to a private file, for example `~/.config/fenrir/wallpaper-publication-approvals.json`. Add one entry for every image approved for public mirroring. Each entry requires the exact license, a human reviewer and rationale, license evidence, and provider-terms evidence that permits public mirroring.
 3. Run the publisher in the Python environment where `fenrir_catalog` is installed:
 
