@@ -13,7 +13,8 @@
       "The first volume remains at its original conservative budget.",
       "Future volumes target 8 GiB of Git object storage.",
       "Only a single serialized Commons acquisition coordinator may fetch source metadata or image bytes.",
-      "Per-image redistribution terms and attribution are mandatory."
+      "Per-image redistribution terms and attribution are mandatory.",
+      "Per-volume image counts are read from each linked live manifest; the registry does not duplicate counts."
     ]
   },
   "volumes": [
@@ -27,8 +28,7 @@
       "role": "hub-and-first-image-volume",
       "active": true,
       "acquisition_enabled": false,
-      "status": "full",
-      "image_count": 134
+      "status": "full"
     },
     {
       "id": "volume-02",
@@ -40,8 +40,7 @@
       "role": "active-image-volume",
       "active": true,
       "acquisition_enabled": true,
-      "status": "populating",
-      "image_count": 0
+      "status": "populating"
     }
   ],
   "next_volume_repository": "sunxsaturn/Fenrir-Wallpapers-03"
