@@ -17,6 +17,7 @@ import json
 import re
 import time
 import warnings
+from urllib.error import HTTPError
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
@@ -35,7 +36,7 @@ ROOT = Path.cwd()
 IMAGE_ROOT = ROOT / "Fenrir Wallpapers"
 INDEX_PATH = ROOT / "manifest/index.json"
 MAX_REPOSITORY_BYTES = 900 * 1024 * 1024
-MAX_IMAGE_BYTES = 50 * 1024 * 1024
+MAX_IMAGE_BYTES = 45 * 1024 * 1024
 MAX_DOWNLOAD_BYTES_PER_RUN = 350 * 1024 * 1024
 MAX_DOWNLOAD_ATTEMPTS_PER_RUN = 120
 PAGE_SIZE = 50
@@ -89,6 +90,8 @@ CATEGORIES = {
 }
 LICENSE_RE = re.compile(r"^CC BY(?:-SA)?(?:\s|$)", re.IGNORECASE)
 SHA_RE = re.compile(r"^[0-9a-f]{64}$")
+MIN_REQUEST_INTERVAL = 2.0
+LAST_REQUEST_AT = 0.0
 
 
 class TextOnly(HTMLParser):
@@ -114,6 +117,28 @@ def clean(value: object) -> str:
         return " ".join(re.sub(r"<[^>]*>", " ", html.unescape(value)).split())
 
 
+def open_polite(request: Request, timeout: int):
+    """Rate-limit all Commons API and image requests; back off on HTTP 429."""
+    global LAST_REQUEST_AT
+    for attempt in range(3):
+        delay = MIN_REQUEST_INTERVAL - (time.monotonic() - LAST_REQUEST_AT)
+        if delay > 0:
+            time.sleep(delay)
+        LAST_REQUEST_AT = time.monotonic()
+        try:
+            return urlopen(request, timeout=timeout)
+        except HTTPError as exc:
+            if exc.code != 429 or attempt == 2:
+                raise
+            retry_after = exc.headers.get("Retry-After", "30")
+            try:
+                wait_seconds = int(retry_after)
+            except (TypeError, ValueError):
+                wait_seconds = 30
+            time.sleep(min(120, max(30, wait_seconds)))
+    raise RuntimeError("Commons request retry loop ended unexpectedly")
+
+
 def get_json(url: str) -> dict:
     request = Request(
         url,
@@ -122,7 +147,7 @@ def get_json(url: str) -> dict:
             "Accept": "application/json",
         },
     )
-    with urlopen(request, timeout=45) as response:
+    with open_polite(request, timeout=45) as response:
         payload = response.read(12 * 1024 * 1024 + 1)
     if len(payload) > 12 * 1024 * 1024:
         raise ValueError("Commons API response exceeded 12 MiB")
@@ -183,7 +208,7 @@ def image_bytes(url: str) -> bytes:
             "Accept": "image/jpeg,image/png,image/webp",
         },
     )
-    with urlopen(request, timeout=90) as response:
+    with open_polite(request, timeout=90) as response:
         content_type = response.headers.get_content_type().lower()
         if content_type not in MIME_SUFFIX:
             raise ValueError(f"unsupported response MIME type: {content_type}")

@@ -2,7 +2,7 @@
 
 The GitHub-hosted, rights-reviewed wallpaper collection for Fenrir Desktop.
 
-**Collection target:** publish the largest practical number of qualifying wallpapers while keeping the complete Git repository below a conservative **900 MiB** budget. There is no fixed image count; the count depends on actual file sizes. Individual images are capped at **95 MiB** to stay below GitHub's 100 MB per-file rejection threshold.
+**Collection target:** publish the largest practical number of qualifying wallpapers while keeping the complete Git repository below a conservative **900 MiB** budget. There is no fixed image count; the count depends on actual file sizes. Individual images are capped at **45 MiB** to stay below GitHub's 100 MB per-file rejection threshold.
 
 ## Repository layout
 
@@ -47,7 +47,7 @@ The publisher does not grant permission, invent rights evidence, authorize downl
 
 ## Storage policy
 
-The publisher uses a conservative **900 MiB Git object budget** and a **50 MiB per-image ceiling**. It skips duplicate SHA-256 content and stops before exceeding the budget. Git history is permanent: deleting an image in a later commit does not reclaim its historical storage. Do not repeatedly replace or recompress published files; add new content as new immutable files.
+The publisher uses a conservative **900 MiB Git object budget** and a **45 MiB per-image ceiling**. It skips duplicate SHA-256 content and stops before exceeding the budget. Git history is permanent: deleting an image in a later commit does not reclaim its historical storage. Do not repeatedly replace or recompress published files; add new content as new immutable files.
 
 This repository is public. Every committed image must be suitable for public redistribution under its documented terms.
 
