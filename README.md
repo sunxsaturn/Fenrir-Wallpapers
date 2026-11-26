@@ -58,3 +58,12 @@ This repository is public. Every committed image must be suitable for public red
 - Installer and deployment contract: [Fenrir Arch](https://github.com/sunxsaturn/Fenrir-Arch)
 
 For local rotation, clone this repository and point Fenrir's wallpaper directory at the `Fenrir Wallpapers` folder (or copy its files into the configured wallpaper folder). Only committed images are public; local Catalog records remain private.
+
+## Automated Commons population
+
+The repository has a scheduled GitHub Actions population job. It searches Wikimedia Commons, checks each file's individual machine-readable license metadata, and downloads only original JPEG/PNG/WebP files that pass the Fenrir landscape-resolution and palette checks. The allowlist accepts CC0, public-domain, CC BY and CC BY-SA files; it rejects non-commercial and no-derivatives terms. Every image keeps its creator, source file page, license, attribution, dimensions and SHA-256 in `manifest/index.json`.
+
+The job runs on the workflow's initial push, can be started again with **Actions → Populate Fenrir Wallpapers → Run workflow**, and repeats every six hours. Each run is bounded to 24 new images, 250 MiB of downloaded bytes and a 900 MiB Git-object budget. It is incremental and avoids exact duplicates. The eight category queries rotate through bounded search pages so the collection grows over multiple runs.
+
+Wikimedia Commons notes that each file has its own reuse requirements and that reusers should verify licensing information and comply with attribution and license terms. Automated metadata checks are a screening aid, not a legal warranty. Review the linked file page and any additional rights notices before relying on an image; files with uncertain or incompatible metadata are excluded. See [Commons reuse guidance](https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia/en).
+
