@@ -1,7 +1,7 @@
 {
   "schema": "org.fenrir.public-wallpapers.index.v1",
-  "updated_at": "2026-11-26T21:05:30.334093Z",
-  "count": 121,
+  "updated_at": "2026-11-26T21:10:04.894128Z",
+  "count": 134,
   "items": [
     {
       "path": "Fenrir Wallpapers/arctic-blue-violet/04c85aeeed2ce0da16f0d7d268f273eef43bb429ae8c2e5a0ae12af2e2ee01c2.jpg",
@@ -247,6 +247,33 @@
       "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
     },
     {
+      "path": "Fenrir Wallpapers/cinematic-nature/03f31f9dc5f3b7b3d7b9213fd03bbc6e5050b7dd6f4b103911e40b8f26680fcd.jpg",
+      "sha256": "03f31f9dc5f3b7b3d7b9213fd03bbc6e5050b7dd6f4b103911e40b8f26680fcd",
+      "file_size_bytes": 4064815,
+      "mime_type": "image/jpeg",
+      "width": 3648,
+      "height": 2736,
+      "dominant_colors": [
+        "#94b5ba",
+        "#99b8ba",
+        "#93b4bb",
+        "#9ab8b9",
+        "#a1bab7"
+      ],
+      "title": "Tafjordfjella.JPG",
+      "description": "Mountain landscape, Tafjord Mountains, Norway. View towards Trollkyrkja summit (between Muldal and Valldal)",
+      "creator": "Eva Eide",
+      "credit": "Own work",
+      "attribution": "Own work. Tafjordfjella.JPG via Wikimedia Commons. License: CC BY-SA 3.0.",
+      "source": "Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Tafjordfjella.JPG",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Tafjordfjella.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license_identifier": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "license_review": "automated metadata gate; verify file page for corrections",
+      "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
+    },
+    {
       "path": "Fenrir Wallpapers/cinematic-nature/1126e672c9283c1a2215950377e63371d379658d6ccfc49da29038449f6bb429.jpg",
       "sha256": "1126e672c9283c1a2215950377e63371d379658d6ccfc49da29038449f6bb429",
       "file_size_bytes": 9287683,
@@ -270,6 +297,33 @@
       "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/View_from_Utvikfjellet_in_Gloppen%2C_2011_August_-_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "license_identifier": "CC BY-SA 3.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "license_review": "automated metadata gate; verify file page for corrections",
+      "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
+    },
+    {
+      "path": "Fenrir Wallpapers/cinematic-nature/1b7a9a2a618014244e3dbcc075e6205332cfb01b9fcd5ed3c708da09bcf4f0e5.jpg",
+      "sha256": "1b7a9a2a618014244e3dbcc075e6205332cfb01b9fcd5ed3c708da09bcf4f0e5",
+      "file_size_bytes": 8700754,
+      "mime_type": "image/jpeg",
+      "width": 5520,
+      "height": 3537,
+      "dominant_colors": [
+        "#475663",
+        "#495966",
+        "#3f4c59",
+        "#485561",
+        "#485662"
+      ],
+      "title": "Ymers Island(js)13.jpg",
+      "description": "Pasmo Kongeborgen, wyspa Traill - widok z Kong Oscar Fjord, Grenlandia",
+      "creator": "Jerzystrzelecki",
+      "credit": "Own work",
+      "attribution": "Own work. Ymers Island(js)13.jpg via Wikimedia Commons. License: CC BY 3.0.",
+      "source": "Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ymers_Island(js)13.jpg",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Ymers_Island%28js%2913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license_identifier": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
       "license_review": "automated metadata gate; verify file page for corrections",
       "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
     },
@@ -376,6 +430,33 @@
       "source": "Wikimedia Commons",
       "source_page": "https://commons.wikimedia.org/wiki/File:Utsikt_mot_F%C3%B8yno_og_Moster.jpg",
       "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Utsikt_mot_F%C3%B8yno_og_Moster.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license_identifier": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+      "license_review": "automated metadata gate; verify file page for corrections",
+      "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
+    },
+    {
+      "path": "Fenrir Wallpapers/cinematic-nature/4bad0b6dbdb810b0f70018cfc5e36742ba7bcd3d95a74cac560da4e9dbed78ea.jpg",
+      "sha256": "4bad0b6dbdb810b0f70018cfc5e36742ba7bcd3d95a74cac560da4e9dbed78ea",
+      "file_size_bytes": 881971,
+      "mime_type": "image/jpeg",
+      "width": 3000,
+      "height": 2105,
+      "dominant_colors": [
+        "#7f7c75",
+        "#817e77",
+        "#807d76",
+        "#7e7b74",
+        "#777367"
+      ],
+      "title": "Hans Gude - From the western Coast of Norway - NG.M.03487 - National Museum of Art, Architecture and Design.jpg",
+      "description": "",
+      "creator": "Hans Gude",
+      "credit": "National Museum of Art, Architecture and Design",
+      "attribution": "National Museum of Art, Architecture and Design. Hans Gude - From the western Coast of Norway - NG.M.03487 - National Museum of Art, Architecture and Design.jpg via Wikimedia Commons. License: Public domain.",
+      "source": "Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Hans_Gude_-_From_the_western_Coast_of_Norway_-_NG.M.03487_-_National_Museum_of_Art%2C_Architecture_and_Design.jpg",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Hans_Gude_-_From_the_western_Coast_of_Norway_-_NG.M.03487_-_National_Museum_of_Art%2C_Architecture_and_Design.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "license_identifier": "Public domain",
       "license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
       "license_review": "automated metadata gate; verify file page for corrections",
@@ -787,6 +868,33 @@
       "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
     },
     {
+      "path": "Fenrir Wallpapers/cinematic-nature/b0aaa2012f483f3e2bbd24ddbf853477c605b183e6fea693a24968a1a799ca00.jpg",
+      "sha256": "b0aaa2012f483f3e2bbd24ddbf853477c605b183e6fea693a24968a1a799ca00",
+      "file_size_bytes": 1607444,
+      "mime_type": "image/jpeg",
+      "width": 3008,
+      "height": 2000,
+      "dominant_colors": [
+        "#cce5e8",
+        "#0f1417",
+        "#0f1418",
+        "#0d1115",
+        "#cbe5e9"
+      ],
+      "title": "SunnhordlandfraaSunde.JPG",
+      "description": "Shows the fjordlandscape of Sunnhordland in Norway seen from Vikefjell at 5450 Sunde. The Hardanger fjord with Stord in the background. To the right a part of Huglo, to the left a part of Halsnøy. The distant mountain is Siggjo at Bømlo.",
+      "creator": "Jostein Røstbø",
+      "credit": "Own work",
+      "attribution": "Own work. SunnhordlandfraaSunde.JPG via Wikimedia Commons. License: CC BY-SA 3.0.",
+      "source": "Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:SunnhordlandfraaSunde.JPG",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/SunnhordlandfraaSunde.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license_identifier": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "license_review": "automated metadata gate; verify file page for corrections",
+      "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
+    },
+    {
       "path": "Fenrir Wallpapers/cinematic-nature/b2400813df698d3b285990ad10eae960432f29fd77c3fc1e155811c53eb0e805.jpg",
       "sha256": "b2400813df698d3b285990ad10eae960432f29fd77c3fc1e155811c53eb0e805",
       "file_size_bytes": 7991204,
@@ -810,6 +918,33 @@
       "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Ymers_Island%28js%295.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "license_identifier": "CC BY 3.0",
       "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "license_review": "automated metadata gate; verify file page for corrections",
+      "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
+    },
+    {
+      "path": "Fenrir Wallpapers/cinematic-nature/bd91533bfb9a781a678272fd6cad90bed50e81c1f12bfaa82cddcf91af0a762c.jpg",
+      "sha256": "bd91533bfb9a781a678272fd6cad90bed50e81c1f12bfaa82cddcf91af0a762c",
+      "file_size_bytes": 678518,
+      "mime_type": "image/jpeg",
+      "width": 2963,
+      "height": 2196,
+      "dominant_colors": [
+        "#d4cfc9",
+        "#d2cec5",
+        "#d3cfc6",
+        "#d4d0c7",
+        "#d2cec4"
+      ],
+      "title": "Man op paardenkar in Noorwegen Kariol (titel op object), RP-F-F01154-T.jpg",
+      "description": "Identificatie Titel(s): Man op paardenkar in Noorwegen. Kariol (titel op object) Objecttype: foto Objectnummer: RP-F-F01154-T Opschriften / Merken: nummer, recto: ‘8831’ Omschrijving: Man achterop een paardenkar bespannen met een fjordenpaard in Noorwegen. Onderdeel van Fotoalbum met opnames van bezienswaardigheden in Europa, Trinidad, Haïti, Martinique en Suriname. Vervaardiging Vervaardiger: fotograaf: Knud Knudsen (vermeld op object) Plaats vervaardiging: Noorwegen Datering: ca. 1870 - ca. 1900 Materiaal: fotopapier Techniek: albuminedruk Afmetingen: foto: h 163 mm × b 220 mm Onderwerp Wat: two-wheeled horse-drawn vehicle, chaise carriage, cart, mountains, landscape with figures, staffage Waar: Noorwegen Verwerving en rechten Verwerving: overdracht van beheer 1994 Copyright: Publiek domein",
+      "creator": "Rijksmuseum",
+      "credit": "http://hdl.handle.net/10934/RM0001.COLLECT.285198",
+      "attribution": "http://hdl.handle.net/10934/RM0001.COLLECT.285198. Man op paardenkar in Noorwegen Kariol (titel op object), RP-F-F01154-T.jpg via Wikimedia Commons. License: CC0.",
+      "source": "Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Man_op_paardenkar_in_Noorwegen_Kariol_(titel_op_object)%2C_RP-F-F01154-T.jpg",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Man_op_paardenkar_in_Noorwegen_Kariol_%28titel_op_object%29%2C_RP-F-F01154-T.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license_identifier": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
       "license_review": "automated metadata gate; verify file page for corrections",
       "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
     },
@@ -1084,6 +1219,33 @@
       "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
     },
     {
+      "path": "Fenrir Wallpapers/cosmic-science-fiction/5461b4069e4d973fe77b136c7532bb36440cf5ef141da87565f83a069cb2789b.jpg",
+      "sha256": "5461b4069e4d973fe77b136c7532bb36440cf5ef141da87565f83a069cb2789b",
+      "file_size_bytes": 18318398,
+      "mime_type": "image/jpeg",
+      "width": 4633,
+      "height": 3590,
+      "dominant_colors": [
+        "#090909",
+        "#080809",
+        "#0b0808",
+        "#09090a",
+        "#0a0707"
+      ],
+      "title": "NGC 1275 Hubble.jpg",
+      "description": "This Hubble Space Telescope image of galaxy NGC 1275 reveals the fine, thread-like filamentary structures in the gas surrounding the galaxy. The red filaments are composed of cool gas being suspended by a magnetic field, and are surrounded by the 100-million-degree Fahrenheit hot gas in the center of the Perseus galaxy cluster. The filaments are dramatic markers of the feedback process through which energy is transferred from the central massive black hole to the surrounding gas. The filaments originate when cool gas is transported from the center of the galaxy by radio bubbles that rise in the hot interstellar gas. At a distance of 230 million light-years, NGC 1275 is one of the closest giant elliptical galaxies and lies at the center of the Perseus cluster of galaxies. The galaxy was photographed in July and August 2006 with the Advanced Camera for Surveys in three color filters. Coordinates Position (RA): 3 19 48.39 Position (Dec): 41° 30' 41.00\" Field of view: 3.86 x 2.99 arcminutes Orientation: North is 8.5° left of vertical Colours & filters Band Wavelength Telescope Optical B 435 nm Hubble Space Telescope ACS Optical V 550 nm Hubble Space Telescope ACS Optical R 625 nm Hubble Space Telescope ACS .",
+      "creator": "NASA, ESA, and the Hubble Heritage (STScI/AURA)-ESA/Hubble Collaboration",
+      "credit": "http://hubblesite.org/newscenter/archive/releases/2008/28/image/a/ https://hubblesite.org/contents/media/images/2008/28/2375-Image.html",
+      "attribution": "http://hubblesite.org/newscenter/archive/releases/2008/28/image/a/ https://hubblesite.org/contents/media/images/2008/28/2375-Image.html. NGC 1275 Hubble.jpg via Wikimedia Commons. License: Public domain.",
+      "source": "Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:NGC_1275_Hubble.jpg",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/NGC_1275_Hubble.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license_identifier": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+      "license_review": "automated metadata gate; verify file page for corrections",
+      "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
+    },
+    {
       "path": "Fenrir Wallpapers/cosmic-science-fiction/56310ec1684356c4ab4817ac8aae36a01ee0be9dced75338a5cfba80f576ff6a.jpg",
       "sha256": "56310ec1684356c4ab4817ac8aae36a01ee0be9dced75338a5cfba80f576ff6a",
       "file_size_bytes": 35878844,
@@ -1192,6 +1354,33 @@
       "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
     },
     {
+      "path": "Fenrir Wallpapers/cosmic-science-fiction/756eb07420a98a3b618505d5a60a53a0040262125ef40f069ba9baef35a8be50.jpg",
+      "sha256": "756eb07420a98a3b618505d5a60a53a0040262125ef40f069ba9baef35a8be50",
+      "file_size_bytes": 3480253,
+      "mime_type": "image/jpeg",
+      "width": 2907,
+      "height": 1486,
+      "dominant_colors": [
+        "#02040e",
+        "#01030d",
+        "#01030c",
+        "#02040b",
+        "#02040c"
+      ],
+      "title": "NGC2207+IC2163.jpg",
+      "description": "Near colliding NGC 2207 and IC 2163 as seen by the NASA/ESA Hubble Space Telescope .",
+      "creator": "NASA/ESA and The Hubble Heritage Team (STScI)",
+      "credit": "http://www.spacetelescope.org/images/opo9941a/ http://hubblesite.org/newscenter/archive/releases/1999/41/image/a/ ( direct link )",
+      "attribution": "http://www.spacetelescope.org/images/opo9941a/ http://hubblesite.org/newscenter/archive/releases/1999/41/image/a/ ( direct link ). NGC2207+IC2163.jpg via Wikimedia Commons. License: Public domain.",
+      "source": "Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:NGC2207%2BIC2163.jpg",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/NGC2207%2BIC2163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license_identifier": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+      "license_review": "automated metadata gate; verify file page for corrections",
+      "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
+    },
+    {
       "path": "Fenrir Wallpapers/cosmic-science-fiction/9572cf5fa37d00dbe6e2779c5717d49e1c4985c20a3a9f17a92088e0e81d5e72.jpg",
       "sha256": "9572cf5fa37d00dbe6e2779c5717d49e1c4985c20a3a9f17a92088e0e81d5e72",
       "file_size_bytes": 5567210,
@@ -1240,6 +1429,33 @@
       "source": "Wikimedia Commons",
       "source_page": "https://commons.wikimedia.org/wiki/File:Sombrero_Galaxy_in_infrared_light_(Hubble_Space_Telescope_and_Spitzer_Space_Telescope).jpg",
       "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Sombrero_Galaxy_in_infrared_light_%28Hubble_Space_Telescope_and_Spitzer_Space_Telescope%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license_identifier": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+      "license_review": "automated metadata gate; verify file page for corrections",
+      "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
+    },
+    {
+      "path": "Fenrir Wallpapers/cosmic-science-fiction/ae6608523236d42d7f52e7529c9e7836ea0a47e2014886f58e63a6d14a3535fd.jpg",
+      "sha256": "ae6608523236d42d7f52e7529c9e7836ea0a47e2014886f58e63a6d14a3535fd",
+      "file_size_bytes": 8663221,
+      "mime_type": "image/jpeg",
+      "width": 3109,
+      "height": 1587,
+      "dominant_colors": [
+        "#070609",
+        "#0e0b0e",
+        "#060508",
+        "#070709",
+        "#080809"
+      ],
+      "title": "A Cosmic Magnifying Glass - Hubble Space Telescope Center Image PR00-08.jpg",
+      "description": "Scanning the heavens for the first time since the successful December 1999 servicing mission, NASA's Hubble Space Telescope imaged a giant, cosmic magnifying glass, a massive cluster of galaxies called Abell 2218. This 'hefty' cluster resides in the constellation Draco, some 2 billion light-years from Earth. The cluster is so massive that its enormous gravitational field deflects light rays passing through it, much as an optical lens bends light to form an image. This phenomenon, called gravitational lensing, magnifies, brightens, and distorts images from faraway objects. The cluster's magnifying powers provides a powerful \"zoom lens\" for viewing distant galaxies that could not normally be observed with the largest telescopes. The picture is dominated by spiral and elliptical galaxies. Resembling a string of tree lights, the biggest and brightest galaxies are members of the foreground cluster. Researchers are intrigued by a tiny red dot just left of top center. This dot may be an extremely remote object made visible by the cluster's magnifying powers. Further investigation is needed to confirm the object's identity. The color picture already reveals several arc-shaped features that are embedded in the cluster and cannot be easily seen in the black-and- white image. The colors in this picture yield clues to the ages, distances, and temperatures of stars, the stuff of galaxies. Blue pinpoints hot young stars. The yellow-white color of several of the galaxies represents the combined light of many stars. Red identifies cool stars, old stars, and the glow of stars in distant galaxies. This view is only possible by combining Hubble's unique image quality with the rare lensing effect provided by the magnifying cluster.",
+      "creator": "NASA, Andrew Fruchter and the ERO Team [Sylvia Baggett (STScI), Richard Hook (ST-ECF), Zoltan Levay (STScI)] (STScI).",
+      "credit": "GRIN/NASA . HubbleSite: gallery , NewsCenter .",
+      "attribution": "GRIN/NASA . HubbleSite: gallery , NewsCenter .. A Cosmic Magnifying Glass - Hubble Space Telescope Center Image PR00-08.jpg via Wikimedia Commons. License: Public domain.",
+      "source": "Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:A_Cosmic_Magnifying_Glass_-_Hubble_Space_Telescope_Center_Image_PR00-08.jpg",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/A_Cosmic_Magnifying_Glass_-_Hubble_Space_Telescope_Center_Image_PR00-08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "license_identifier": "Public domain",
       "license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
       "license_review": "automated metadata gate; verify file page for corrections",
@@ -1350,6 +1566,33 @@
       "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Markarian_817_%28captured_by_the_Hubble_Space_Telescope%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "license_identifier": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "license_review": "automated metadata gate; verify file page for corrections",
+      "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
+    },
+    {
+      "path": "Fenrir Wallpapers/cosmic-science-fiction/f93a1e237e8306ed8e3e8e679c7624e61f5cf9d66fb7de9bae7a3e768f3b35ae.jpg",
+      "sha256": "f93a1e237e8306ed8e3e8e679c7624e61f5cf9d66fb7de9bae7a3e768f3b35ae",
+      "file_size_bytes": 2602285,
+      "mime_type": "image/jpeg",
+      "width": 3231,
+      "height": 1948,
+      "dominant_colors": [
+        "#0d100f",
+        "#0d0f0e",
+        "#0e100e",
+        "#0e110f",
+        "#0e100f"
+      ],
+      "title": "Hubble Views Galaxy From Famous Catalog.jpg",
+      "description": "This bright, somewhat blob-like object — seen in this image taken by the NASA/ESA Hubble Space Telescope — is a galaxy named NGC 1803. It is about 200 million light-years away, in the southern constellation of Pictor (the Painter’s Easel). NGC 1803 was discovered in 1834 by astronomer John Herschel. Herschel is a big name in astronomy; John, his father William and his aunt Caroline all made huge contributions to the field, and their legacies remain today. William systematically cataloged many of the objects he viewed in the night sky, named many moons in the solar system, discovered infrared radiation and more. Caroline discovered several comets and nebulas. John took this aforementioned catalog of night-sky objects and reworked and expanded it into his General Catalogue of Nebulae and Clusters of Stars. This was the basis for the cataloging system still used today by astronomers, John Louis Emil Dreyer’s New General Catalogue of Nebulae and Clusters of Stars, or the New General Catalogue for short. This gives rise to the NGC names assigned to a vast number of galaxies — including NGC 1803. This galaxy is one of a galactic pair. It was described by Dreyer as being “faint, small, [and] round,” and located near to a very bright star to the southeast. This star is in fact the nebulous lenticular galaxy PGC 16720 — not visible in this image. Image credit: ESA/Hubble & NASA, A. Bellini et al. NASA image use policy. NASA Goddard Space Flight Center enables NASA’s mission through four scientific endeavors: Earth Science, Heliophysics, Solar System Exploration, and Astrophysics. Goddard plays a leading role in NASA’s accomplishments by contributing compelling scientific knowledge to advance the Agency’s mission. Follow us on Twitter Like us on Facebook Find us on Instagram",
+      "creator": "NASA Goddard Photo and Video",
+      "credit": "https://www.flickr.com/photos/24662369@N07/49425263977/",
+      "attribution": "https://www.flickr.com/photos/24662369@N07/49425263977/. Hubble Views Galaxy From Famous Catalog.jpg via Wikimedia Commons. License: CC BY 2.0.",
+      "source": "Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Hubble_Views_Galaxy_From_Famous_Catalog.jpg",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Hubble_Views_Galaxy_From_Famous_Catalog.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license_identifier": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
       "license_review": "automated metadata gate; verify file page for corrections",
       "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
     },
@@ -2434,6 +2677,33 @@
       "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
     },
     {
+      "path": "Fenrir Wallpapers/nordic-mythology-fantasy/827b688d3f2a3281e322a3e2f0c9eb6c3afc9f9d5d6c684bb7ddfe6984d34a8d.jpg",
+      "sha256": "827b688d3f2a3281e322a3e2f0c9eb6c3afc9f9d5d6c684bb7ddfe6984d34a8d",
+      "file_size_bytes": 22565788,
+      "mime_type": "image/jpeg",
+      "width": 7185,
+      "height": 4795,
+      "dominant_colors": [
+        "#d8d1c9",
+        "#d6d3cc",
+        "#d4cec2",
+        "#d4cec3",
+        "#d8d1c8"
+      ],
+      "title": "Gallizien Friedhofskapelle Kriegerdenkmal Siegfried der Drachentöter 09052018 3206.jpg",
+      "description": "Fresco Sigurd slaying Fafnir at the cemetery chapel (war memorial), municipality Gallizien , district Voelkermarkt, Carinthia , Austria , EU",
+      "creator": "Johann Jaritz",
+      "credit": "Own work",
+      "attribution": "Own work. Gallizien Friedhofskapelle Kriegerdenkmal Siegfried der Drachentöter 09052018 3206.jpg via Wikimedia Commons. License: CC BY-SA 4.0.",
+      "source": "Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Gallizien_Friedhofskapelle_Kriegerdenkmal_Siegfried_der_Drachent%C3%B6ter_09052018_3206.jpg",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Gallizien_Friedhofskapelle_Kriegerdenkmal_Siegfried_der_Drachent%C3%B6ter_09052018_3206.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license_identifier": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "license_review": "automated metadata gate; verify file page for corrections",
+      "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
+    },
+    {
       "path": "Fenrir Wallpapers/nordic-mythology-fantasy/917882775f064bd0d732423db9bb7d6fa8009851fe9de03fb4ac67c009e210f0.jpg",
       "sha256": "917882775f064bd0d732423db9bb7d6fa8009851fe9de03fb4ac67c009e210f0",
       "file_size_bytes": 2702537,
@@ -2509,6 +2779,60 @@
       "source": "Wikimedia Commons",
       "source_page": "https://commons.wikimedia.org/wiki/File:The_Elder_Edda_of_Saemund_Sigfusson_and_the_Younger_Edda_of_Snorre_Sturleson_-_A_Feast_in_Valhalla.png",
       "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/The_Elder_Edda_of_Saemund_Sigfusson_and_the_Younger_Edda_of_Snorre_Sturleson_-_A_Feast_in_Valhalla.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license_identifier": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+      "license_review": "automated metadata gate; verify file page for corrections",
+      "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
+    },
+    {
+      "path": "Fenrir Wallpapers/nordic-mythology-fantasy/c5d33dbbc8e02bb8a091d61c8b3c4dd23961d7d2d8d0bab714d5ced5df377dbc.jpg",
+      "sha256": "c5d33dbbc8e02bb8a091d61c8b3c4dd23961d7d2d8d0bab714d5ced5df377dbc",
+      "file_size_bytes": 12429841,
+      "mime_type": "image/jpeg",
+      "width": 5235,
+      "height": 2167,
+      "dominant_colors": [
+        "#e7dbca",
+        "#e8dccb",
+        "#e9dccb",
+        "#e6dac9",
+        "#e5dac9"
+      ],
+      "title": "Ancient Temple at Uppsala, from Suecia antiqua et hodierna - cropped from I-63.jpg",
+      "description": "An engraving of the ancient Temple at Uppsala. The engraving was made in Stockholm in 1694 and was published in volume one of Suecia antiqua et hodierna . This image was cropped from image I-63. The Latin writing states the image shows the most ancient Gothic shrine at Uppsala and was based on a drawing kept at Santa Brigida's Church in Rome.",
+      "creator": "Erik Reitz and Erik Dahlbergh",
+      "credit": "https://suecia.kb.se/F/?func=direct&doc_number=001923535&local_base=sah",
+      "attribution": "https://suecia.kb.se/F/?func=direct&doc_number=001923535&local_base=sah. Ancient Temple at Uppsala, from Suecia antiqua et hodierna - cropped from I-63.jpg via Wikimedia Commons. License: Public domain.",
+      "source": "Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ancient_Temple_at_Uppsala%2C_from_Suecia_antiqua_et_hodierna_-_cropped_from_I-63.jpg",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Ancient_Temple_at_Uppsala%2C_from_Suecia_antiqua_et_hodierna_-_cropped_from_I-63.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license_identifier": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+      "license_review": "automated metadata gate; verify file page for corrections",
+      "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
+    },
+    {
+      "path": "Fenrir Wallpapers/nordic-mythology-fantasy/d8bfc9fdccd96d1a83713d86443f2da8f42418414c4c6d4d3c136cd0366d834b.jpg",
+      "sha256": "d8bfc9fdccd96d1a83713d86443f2da8f42418414c4c6d4d3c136cd0366d834b",
+      "file_size_bytes": 3195955,
+      "mime_type": "image/jpeg",
+      "width": 5950,
+      "height": 4054,
+      "dominant_colors": [
+        "#c1c1c1",
+        "#c0c0c0",
+        "#c2c2c2",
+        "#bebebe",
+        "#bfbfbf"
+      ],
+      "title": "Живописное обозрение 1891, № 01-26 (6 янв. - 30 июня); № 27-52 (7 июля - 29 дек.) Page 0207.jpg",
+      "description": "Живописное обозрение стран света : иллюстрированный журнал путешествий, исследований и проч.; художественно-литературный журнал; иллюстрированный журнал; ... / Ред. Н. И. Зуев, Н. И. Шульгин, П. Н. Полевой, С. Е. Добродеев, А. П. Нестор, И. Н. Потапенко, П. В. Быков, А. К. Шеллер, К. С. Баранцевич. — Спб.: типография Спб. акц. общ. «Слово», 1872—1905. — полные годовые подшивки, еженед.",
+      "creator": "Журнал «Живописное обозрѣнiе странъ свѣта» (1872—1900,1902—1905) / Живописное обозрение стран света [Zhivopisnoye obozreniye stran sveta (Foreign Lands' Pictorial Review)]; Российская национальная библиотека (РНБ); kmv20120",
+      "credit": "Никита Иванович Зуев (1823—1890), Николай Иванович Шульгин (1832 — 1882), Пётр Николаевич Полевой (1839—1902), Сергей Емельянович Добродеев (1846—1910), Пётр Васильевич Быков (1844—1930), Александр Константинович Шеллер (А. Шеллер-Михайлов; 1838—1900), Казимир Станиславович Баранцевич (1851—1927)",
+      "attribution": "Никита Иванович Зуев (1823—1890), Николай Иванович Шульгин (1832 — 1882), Пётр Николаевич Полевой (1839—1902), Сергей Емельянович Добродеев (1846—1910), Пётр Васильевич Быков (1844—1930), Александр Константинович Шеллер (А. Шеллер-Михайлов; 1838—1900), Казимир Станиславович Баранцевич (1851—1927). Живописное обозрение 1891, № 01-26 (6 янв. - 30 июня); № 27-52 (7 июля - 29 дек.) Page 0207.jpg via Wikimedia Commons. License: Public domain.",
+      "source": "Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%D0%96%D0%B8%D0%B2%D0%BE%D0%BF%D0%B8%D1%81%D0%BD%D0%BE%D0%B5_%D0%BE%D0%B1%D0%BE%D0%B7%D1%80%D0%B5%D0%BD%D0%B8%D0%B5_1891%2C_%E2%84%96_01-26_(6_%D1%8F%D0%BD%D0%B2._-_30_%D0%B8%D1%8E%D0%BD%D1%8F)%3B_%E2%84%96_27-52_(7_%D0%B8%D1%8E%D0%BB%D1%8F_-_29_%D0%B4%D0%B5%D0%BA.)_Page_0207.jpg",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/%D0%96%D0%B8%D0%B2%D0%BE%D0%BF%D0%B8%D1%81%D0%BD%D0%BE%D0%B5_%D0%BE%D0%B1%D0%BE%D0%B7%D1%80%D0%B5%D0%BD%D0%B8%D0%B5_1891%2C_%E2%84%96_01-26_%286_%D1%8F%D0%BD%D0%B2._-_30_%D0%B8%D1%8E%D0%BD%D1%8F%29%3B_%E2%84%96_27-52_%287_%D0%B8%D1%8E%D0%BB%D1%8F_-_29_%D0%B4%D0%B5%D0%BA.%29_Page_0207.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "license_identifier": "Public domain",
       "license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
       "license_review": "automated metadata gate; verify file page for corrections",
@@ -2920,6 +3244,33 @@
       "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
     },
     {
+      "path": "Fenrir Wallpapers/red-violet-dark-fantasy/5d6104b21f28c149955d087b58bbdce9f427462a81796bfcfe90e55b890b74e5.jpg",
+      "sha256": "5d6104b21f28c149955d087b58bbdce9f427462a81796bfcfe90e55b890b74e5",
+      "file_size_bytes": 1339037,
+      "mime_type": "image/jpeg",
+      "width": 2592,
+      "height": 1944,
+      "dominant_colors": [
+        "#e4e4e4",
+        "#d9d9da",
+        "#dadadc",
+        "#dfdfe0",
+        "#e3e3e3"
+      ],
+      "title": "Volcanic Tablelands (27497079711).jpg",
+      "description": "Get your rock on with OHV riding, bouldering, rock climbing, wildlife viewing, birdwatching, horseback riding, mountain biking and hiking. The Volcanic Tablelands is a vast volcanic landscape that was formed over 700,000 years ago by materials spewing from the Long Valley Caldera, located to the northwest. Photo by BLM Bishop Field Office employee.",
+      "creator": "blmcalifornia",
+      "credit": "Volcanic Tablelands",
+      "attribution": "Volcanic Tablelands. Volcanic Tablelands (27497079711).jpg via Wikimedia Commons. License: Public domain.",
+      "source": "Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Volcanic_Tablelands_(27497079711).jpg",
+      "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Volcanic_Tablelands_%2827497079711%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license_identifier": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+      "license_review": "automated metadata gate; verify file page for corrections",
+      "publication_policy": "CC0/Public Domain/CC BY/CC BY-SA; NC and ND excluded"
+    },
+    {
       "path": "Fenrir Wallpapers/red-violet-dark-fantasy/661ef5fefb73ee8df4de37e624e916faba4d3e1668d42476a0298f63a1b86c46.jpg",
       "sha256": "661ef5fefb73ee8df4de37e624e916faba4d3e1668d42476a0298f63a1b86c46",
       "file_size_bytes": 6583515,
@@ -3274,42 +3625,42 @@
   "search_state": {
     "nordic-mythology-fantasy": {
       "query_index": 0,
-      "offset": 250,
+      "offset": 300,
       "last_query": "Norse mythology"
     },
     "cinematic-nature": {
       "query_index": 0,
-      "offset": 250,
+      "offset": 300,
       "last_query": "fjord mountain landscape"
     },
     "cosmic-science-fiction": {
       "query_index": 1,
-      "offset": 150,
+      "offset": 200,
       "last_query": "Hubble space telescope galaxy"
     },
     "arctic-blue-violet": {
       "query_index": 0,
-      "offset": 250,
+      "offset": 300,
       "last_query": "aurora borealis landscape"
     },
     "monochrome-futuristic-architecture": {
       "query_index": 0,
-      "offset": 250,
+      "offset": 300,
       "last_query": "brutalist architecture"
     },
     "red-violet-dark-fantasy": {
       "query_index": 0,
-      "offset": 250,
+      "offset": 300,
       "last_query": "volcanic landscape"
     },
     "deep-ocean-bioluminescence": {
       "query_index": 1,
-      "offset": 150,
+      "offset": 200,
       "last_query": "coral reef underwater"
     },
     "obsidian-minimalism-abstract-geometry": {
       "query_index": 0,
-      "offset": 250,
+      "offset": 300,
       "last_query": "abstract black geometric sculpture"
     }
   }
