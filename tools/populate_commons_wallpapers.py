@@ -317,7 +317,7 @@ def main() -> int:
         for item in index["items"]
         if isinstance(item, dict) and isinstance(item.get("commons_title"), str)
     }
-    search_state = index["search_state"]
+    search_state = index.setdefault("search_state", {})
     start_size = git_object_bytes()
     available_budget = MAX_REPOSITORY_BYTES - start_size
     if available_budget <= 2 * 1024 * 1024:
