@@ -15,8 +15,15 @@
       "Only a single serialized Commons acquisition coordinator may fetch source metadata or image bytes.",
       "Per-image redistribution terms and attribution are mandatory.",
       "Per-volume image counts are read from each linked live manifest; the registry does not duplicate counts.",
-      "Volume 02 acquisition batches are capped at 700 MiB and remain below GitHub's 2 GB push limit."
-    ]
+      "Volume 02 acquisition batches are capped at 700 MiB and remain below GitHub's 2 GB push limit.",
+      "Volume 02 uses least-filled-folder-first acquisition: 1 GiB target per themed category and 512 MiB for Unsorted."
+    ],
+    "folder_targets_bytes": {
+      "themed_categories": 1073741824,
+      "unsorted": 536870912,
+      "selection": "least-filled folders first; rotating tie order between acquisition runs",
+      "note": "Folder targets are subordinate to the 8 GiB per-volume ceiling. Existing folder contents above target remain unchanged."
+    }
   },
   "volumes": [
     {
