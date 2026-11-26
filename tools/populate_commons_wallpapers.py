@@ -35,11 +35,11 @@ ROOT = Path.cwd()
 IMAGE_ROOT = ROOT / "Fenrir Wallpapers"
 INDEX_PATH = ROOT / "manifest/index.json"
 MAX_REPOSITORY_BYTES = 900 * 1024 * 1024
-MAX_IMAGE_BYTES = 95 * 1024 * 1024
-MAX_DOWNLOAD_BYTES_PER_RUN = 250 * 1024 * 1024
-MAX_DOWNLOAD_ATTEMPTS_PER_RUN = 80
+MAX_IMAGE_BYTES = 50 * 1024 * 1024
+MAX_DOWNLOAD_BYTES_PER_RUN = 350 * 1024 * 1024
+MAX_DOWNLOAD_ATTEMPTS_PER_RUN = 120
 PAGE_SIZE = 50
-PER_CATEGORY_LIMIT = 3
+PER_CATEGORY_LIMIT = 5
 MIME_SUFFIX = {
     "image/jpeg": ".jpg",
     "image/png": ".png",
@@ -58,8 +58,8 @@ CATEGORIES = {
     ],
     "cosmic-science-fiction": [
         "nebula galaxy astrophotography",
+        "Hubble space telescope galaxy",
         "Milky Way night sky",
-        "planet astronomy space",
     ],
     "arctic-blue-violet": [
         "aurora borealis landscape",
@@ -78,12 +78,12 @@ CATEGORIES = {
     ],
     "deep-ocean-bioluminescence": [
         "bioluminescence underwater",
-        "deep sea underwater landscape",
+        "coral reef underwater",
         "underwater ocean photography",
     ],
     "obsidian-minimalism-abstract-geometry": [
         "abstract black geometric sculpture",
-        "minimalist brutalist architecture",
+        "brutalist architecture modernist",
         "modern architecture geometric minimalism",
     ],
 }
