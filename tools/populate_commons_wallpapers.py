@@ -552,3 +552,5 @@ if __name__ == "__main__":
     raise SystemExit(main())
 
 # Incremental ingestion activation commit; content is otherwise unchanged.
+
+# Continue incremental Commons collection from the persisted manifest cursor.
