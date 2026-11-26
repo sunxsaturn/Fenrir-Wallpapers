@@ -1,0 +1,17 @@
+{
+  "schema": "org.fenrir.publication-approvals.v1",
+  "notice": "Example only. Add entries only after a human has verified the specific image license and provider terms permit public redistribution and mirroring.",
+  "approvals": [
+    {
+      "asset_id": "CATALOG_ASSET_ID",
+      "redistribution_permitted": true,
+      "provider_terms_permit_public_mirroring": true,
+      "license_identifier": "CC0-1.0",
+      "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "provider_terms_evidence_url": "https://example.org/terms",
+      "reviewer": "HUMAN_REVIEWER",
+      "rationale": "Describe the exact evidence checked and why public redistribution of this specific image is permitted.",
+      "category": "unsorted"
+    }
+  ]
+}

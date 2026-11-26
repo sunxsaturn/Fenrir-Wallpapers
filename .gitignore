@@ -1,0 +1,13 @@
+# Private Catalog data and per-user publication approvals
+*.sqlite
+*.sqlite3
+*.db
+quarantine/
+publication-approvals.json
+wallpaper-publication-approvals.json
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
