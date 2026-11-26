@@ -554,3 +554,5 @@ if __name__ == "__main__":
 # Incremental ingestion activation commit; content is otherwise unchanged.
 
 # Continue incremental Commons collection from the persisted manifest cursor.
+
+# Final storage-budget pass continues from the current persisted search cursors.
