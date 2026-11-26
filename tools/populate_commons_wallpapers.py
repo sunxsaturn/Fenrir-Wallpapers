@@ -556,3 +556,5 @@ if __name__ == "__main__":
 # Continue incremental Commons collection from the persisted manifest cursor.
 
 # Final storage-budget pass continues from the current persisted search cursors.
+
+# Final near-budget sweep; the run stops before exceeding 900 MiB.
