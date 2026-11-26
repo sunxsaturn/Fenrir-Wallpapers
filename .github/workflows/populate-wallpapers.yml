@@ -21,7 +21,7 @@ concurrency:
 jobs:
   populate:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 120 # bounded collection slice; repeated runs continue from persisted search cursors
     steps:
       - name: Check out complete image history
         uses: actions/checkout@v4
