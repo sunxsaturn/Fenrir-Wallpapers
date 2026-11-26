@@ -25,8 +25,24 @@
       "manifest_path": "manifest/index.json",
       "manifest_url": "https://raw.githubusercontent.com/sunxsaturn/Fenrir-Wallpapers/main/manifest/index.json",
       "role": "hub-and-first-image-volume",
-      "active": true
+      "active": true,
+      "acquisition_enabled": false,
+      "status": "full",
+      "image_count": 134
+    },
+    {
+      "id": "volume-02",
+      "repository": "sunxsaturn/Fenrir-Wallpapers-02",
+      "branch": "main",
+      "images_path": "Fenrir Wallpapers/",
+      "manifest_path": "manifest/index.json",
+      "manifest_url": "https://raw.githubusercontent.com/sunxsaturn/Fenrir-Wallpapers-02/main/manifest/index.json",
+      "role": "active-image-volume",
+      "active": true,
+      "acquisition_enabled": true,
+      "status": "populating",
+      "image_count": 0
     }
   ],
-  "next_volume_repository": "sunxsaturn/Fenrir-Wallpapers-02"
+  "next_volume_repository": "sunxsaturn/Fenrir-Wallpapers-03"
 }

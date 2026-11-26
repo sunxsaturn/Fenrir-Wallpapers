@@ -1,65 +1,14 @@
-name: Populate Fenrir Wallpapers
+name: Populate Fenrir Wallpapers Volume 01
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/populate-wallpapers.yml"
-      - "tools/populate_commons_wallpapers.py"
-      - "manifest/index.json"
   workflow_dispatch:
-  schedule:
-    - cron: "23 */6 * * *"
 
 permissions:
   contents: write
 
-concurrency:
-  group: fenrir-wallpaper-population
-  cancel-in-progress: false
-
 jobs:
-  populate:
+  status:
     runs-on: ubuntu-latest
-    timeout-minutes: 120 # bounded collection slice; repeated runs continue from persisted search cursors
     steps:
-      - name: Check out complete image history
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Update checkout to the latest main
-        run: |
-          git fetch origin main
-          git reset --hard origin/main
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Install image validator
-        run: python -m pip install --disable-pip-version-check Pillow
-      - name: Discover, download and validate free-license wallpapers
-        run: python tools/populate_commons_wallpapers.py --max-new-images 40
-      - name: Commit verified images and attribution manifest
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "Fenrir Wallpapers" manifest/index.json
-          if git diff --cached --quiet; then
-            echo "No new qualifying wallpapers in this run."
-            exit 0
-          fi
-          git commit -m "chore: add verified Commons wallpapers"
-          git fetch origin main
-          git rebase origin/main
-          for attempt in 1 2 3 4 5; do
-            if git push origin HEAD:main; then
-              exit 0
-            fi
-            echo "Push attempt $attempt failed; retrying after reconnect."
-            if git fetch origin main; then
-              git rebase origin/main
-            fi
-            sleep $((attempt * 15))
-          done
-          echo "Unable to push wallpaper batch after five attempts." >&2
-          exit 1
+      - name: Explain that Volume 01 is full
+        run: echo "Volume 01 is retained as a read-only archive. New wallpaper acquisition is handled by Fenrir-Wallpapers-02."

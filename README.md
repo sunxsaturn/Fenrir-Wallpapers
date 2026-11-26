@@ -47,7 +47,7 @@ The publisher does not grant permission, invent rights evidence, authorize downl
 
 ## Storage policy
 
-The publisher and automatic importer use a conservative **900 MiB Git object budget**. New images are capped at **45 MiB** each and duplicate SHA-256 content is skipped. One image from the initial import is approximately 69.5 MiB (below GitHub's 100 MB hard per-file limit, but above its 50 MB recommendation); it remains in history rather than rewriting the public branch. All later imports enforce the 45 MiB cap. The importer stops before exceeding the repository budget. Git history is permanent: deleting an image in a later commit does not reclaim its historical storage. Do not repeatedly replace or recompress published files; add new content as new immutable files.
+The Volume 01 publisher and importer used a conservative **900 MiB Git object budget**. New images are capped at **45 MiB** each and duplicate SHA-256 content is skipped. One image from the initial import is approximately 69.5 MiB (below GitHub's 100 MB hard per-file limit, but above its 50 MB recommendation); it remains in history rather than rewriting the public branch. All later imports enforce the 45 MiB cap. The importer stops before exceeding the repository budget. Git history is permanent: deleting an image in a later commit does not reclaim its historical storage. Do not repeatedly replace or recompress published files; add new content as new immutable files.
 
 This repository is public. Every committed image must be suitable for public redistribution under its documented terms.
 
@@ -63,7 +63,7 @@ For local rotation, clone this repository and point Fenrir's wallpaper directory
 
 The repository has a scheduled GitHub Actions population job. It searches Wikimedia Commons, checks each file's individual machine-readable license metadata, and downloads only original JPEG/PNG/WebP files that pass the Fenrir landscape-resolution and palette checks. The allowlist accepts CC0, public-domain, CC BY and CC BY-SA files; it rejects non-commercial and no-derivatives terms. Every image keeps its creator, source file page, license, attribution, dimensions and SHA-256 in `manifest/index.json`.
 
-The job runs on the workflow's initial push, can be started again with **Actions → Populate Fenrir Wallpapers → Run workflow**, and repeats every six hours. Each run is bounded to 40 new images, 350 MiB of downloaded bytes and a 900 MiB Git-object budget. It is incremental and avoids exact duplicates. The eight category queries rotate through bounded search pages so the collection grows over multiple runs.
+Volume 01 reached its conservative 900 MiB Git-object target with 134 published images. Its automatic acquisition schedule is now paused and the volume is retained as a read-only archive. New acquisition runs in Volume 02 and later numbered volumes. The hub registry at `manifest/volumes.json` lists every part of the combined collection.
 
 Wikimedia Commons notes that each file has its own reuse requirements and that reusers should verify licensing information and comply with attribution and license terms. Automated metadata checks are a screening aid, not a legal warranty. Review the linked file page and any additional rights notices before relying on an image; files with uncertain or incompatible metadata are excluded. See [Commons reuse guidance](https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia/en).
 
