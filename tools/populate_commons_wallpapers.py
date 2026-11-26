@@ -550,3 +550,5 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+# Incremental ingestion activation commit; content is otherwise unchanged.
