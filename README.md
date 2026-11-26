@@ -67,3 +67,13 @@ The job runs on the workflow's initial push, can be started again with **Actions
 
 Wikimedia Commons notes that each file has its own reuse requirements and that reusers should verify licensing information and comply with attribution and license terms. Automated metadata checks are a screening aid, not a legal warranty. Review the linked file page and any additional rights notices before relying on an image; files with uncertain or incompatible metadata are excluded. See [Commons reuse guidance](https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia/en).
 
+## Multi-repository library (volumes)
+
+This repository is the library hub and **Volume 01**. The live volume registry is `manifest/volumes.json`; clients should read that registry rather than hard-code a list of wallpaper repositories. New repositories will use the names `Fenrir-Wallpapers-02`, `Fenrir-Wallpapers-03`, and so on, each with the same `Fenrir Wallpapers/` category layout and its own `manifest/index.json`.
+
+The initial Volume 01 was deliberately kept near a conservative 900 MiB object-store budget. For future volumes, the target is **8 GiB per repository**, below GitHub's current 10 GB recommended on-disk size. New images are capped at 45 MiB and upload batches stay well below GitHub's 2 GB push limit. These are operating targets, not a claim that GitHub offers unlimited aggregate storage. See [GitHub repository limits](https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits).
+
+A single sequential acquisition coordinator will manage the volume registry and write each validated image to the active volume. Do not run independent Wikimedia downloaders concurrently across volumes: Wikimedia applies API rate limits globally and asks clients to identify themselves, keep concurrency low, and obey `Retry-After`. Each file still needs its own valid reuse terms and attribution; splitting repositories does not change licensing or raise source rate limits. See [Wikimedia API rate limits](https://www.mediawiki.org/wiki/Wikimedia_APIs/Rate_limits).
+
+Fenrir Desktop should sync all registered volumes into one local wallpaper root. Its recursive image scanner can then treat the combined directory tree as one collection.
+

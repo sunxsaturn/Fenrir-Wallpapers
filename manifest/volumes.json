@@ -1,0 +1,32 @@
+{
+  "schema": "org.fenrir.wallpaper-library-volumes.v1",
+  "library_id": "fenrir-wallpapers",
+  "hub_repository": "sunxsaturn/Fenrir-Wallpapers",
+  "updated_at": "2026-11-26",
+  "policy": {
+    "initial_volume_target_bytes": 943718400,
+    "future_volume_target_bytes": 8589934592,
+    "github_recommended_repository_size_bytes": 10737418240,
+    "max_new_image_bytes": 47185920,
+    "max_upload_batch_bytes": 367001600,
+    "notes": [
+      "The first volume remains at its original conservative budget.",
+      "Future volumes target 8 GiB of Git object storage.",
+      "Only a single serialized Commons acquisition coordinator may fetch source metadata or image bytes.",
+      "Per-image redistribution terms and attribution are mandatory."
+    ]
+  },
+  "volumes": [
+    {
+      "id": "volume-01",
+      "repository": "sunxsaturn/Fenrir-Wallpapers",
+      "branch": "main",
+      "images_path": "Fenrir Wallpapers/",
+      "manifest_path": "manifest/index.json",
+      "manifest_url": "https://raw.githubusercontent.com/sunxsaturn/Fenrir-Wallpapers/main/manifest/index.json",
+      "role": "hub-and-first-image-volume",
+      "active": true
+    }
+  ],
+  "next_volume_repository": "sunxsaturn/Fenrir-Wallpapers-02"
+}
