@@ -8,13 +8,14 @@
     "future_volume_target_bytes": 8589934592,
     "github_recommended_repository_size_bytes": 10737418240,
     "max_new_image_bytes": 47185920,
-    "max_upload_batch_bytes": 367001600,
+    "max_upload_batch_bytes": 734003200,
     "notes": [
       "The first volume remains at its original conservative budget.",
       "Future volumes target 8 GiB of Git object storage.",
       "Only a single serialized Commons acquisition coordinator may fetch source metadata or image bytes.",
       "Per-image redistribution terms and attribution are mandatory.",
-      "Per-volume image counts are read from each linked live manifest; the registry does not duplicate counts."
+      "Per-volume image counts are read from each linked live manifest; the registry does not duplicate counts.",
+      "Volume 02 acquisition batches are capped at 700 MiB and remain below GitHub's 2 GB push limit."
     ]
   },
   "volumes": [
