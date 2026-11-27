@@ -16,14 +16,14 @@
       "Per-image redistribution terms and attribution are mandatory.",
       "Per-volume image counts are read from each linked live manifest; the registry does not duplicate counts.",
       "Volume 02 acquisition batches are capped at 700 MiB and remain below GitHub's 2 GB push limit.",
-      "Volume 02 uses least-filled-folder-first acquisition: 1 GiB target per themed category and 512 MiB for Unsorted.",
-      "Final allocation phase lowers the target for previously underfilled themed folders to 700 MiB because several other categories already exceed 1 GiB; this keeps all folders within the remaining 8 GiB volume budget."
+      "Final allocation phase lowers the target for previously underfilled themed folders to 700 MiB because several other categories already exceed 1 GiB; this keeps all folders within the remaining 8 GiB volume budget.",
+      "Volume 02 target: 700 MiB per themed category and 512 MiB for Unsorted; least-filled-first selection."
     ],
     "folder_targets_bytes": {
       "themed_categories": 734003200,
       "unsorted": 536870912,
       "selection": "least-filled folders first; rotating tie order between acquisition runs",
-      "note": "Folder targets are subordinate to the 8 GiB per-volume ceiling. Existing folder contents above target remain unchanged."
+      "note": "Themed category folders use a 700 MiB target; Unsorted uses 512 MiB. These targets are subordinate to the 8 GiB per-volume ceiling. Existing folder contents above target remain unchanged."
     }
   },
   "volumes": [
