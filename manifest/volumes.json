@@ -18,16 +18,35 @@
       "Volume 02 acquisition batches are capped at 700 MiB and remain below GitHub's 2 GB push limit.",
       "Final allocation phase lowers the target for previously underfilled themed folders to 700 MiB because several other categories already exceed 1 GiB; this keeps all folders within the remaining 8 GiB volume budget.",
       "Volume 02 target: 700 MiB per themed category and 512 MiB for Unsorted; least-filled-first selection.",
-      "Volume 03 uses the same 8 GiB repository ceiling, 45 MiB per-image ceiling, 700 MiB themed-folder targets and 512 MiB Unsorted target, subject to source licensing and attribution checks.",
       "Volume 02 performs guarded final-fill windows at 06:43 and 18:43 UTC only when Volume 03 has no active or queued acquisition run.",
       "Volume 03 runs longer serialized fill windows at 00:17 and 12:17 UTC only when Volume 02 has no active or queued acquisition run.",
-      "Both volume workflows query the other public repository's Actions runs before downloading; each retains its own hard 8 GiB repository ceiling and the common Commons pacing policy."
+      "Both volume workflows query the other public repository's Actions runs before downloading; each retains its own hard 8 GiB repository ceiling and the common Commons pacing policy.",
+      "Volume 02's Arctic Blue/Violet folder has exceeded its local target; new Arctic overflow is routed into Volume 03 without rewriting or duplicating the historical Volume 02 files.",
+      "Volume 03 provides 880 MiB per category as overflow capacity for all nine categories; total planned folder capacity is 7.734 GiB and the 8 GiB repository-wide guard remains the hard stop.",
+      "Both importers now rank categories by globally committed unique image count across registered active volumes, then by local folder storage usage, with rotating ties."
     ],
     "folder_targets_bytes": {
       "themed_categories": 734003200,
       "unsorted": 536870912,
       "selection": "least-filled folders first; rotating tie order between acquisition runs",
       "note": "Themed category folders use a 700 MiB target; Unsorted uses 512 MiB. These targets are subordinate to the 8 GiB per-volume ceiling. Existing folder contents above target remain unchanged."
+    },
+    "volume_specific_folder_targets_bytes": {
+      "sunxsaturn/Fenrir-Wallpapers-02": {
+        "themed_categories": 734003200,
+        "unsorted": 536870912,
+        "note": "Preserve the existing Volume 02 folder targets; the 8 GiB repository guard is close and remains authoritative."
+      },
+      "sunxsaturn/Fenrir-Wallpapers-03": {
+        "all_categories": 922746880,
+        "note": "880 MiB per category across all nine folders, reserving approximately 272 MiB below the 8 GiB hard repository ceiling."
+      }
+    },
+    "selection": {
+      "primary": "lowest globally committed image count per category across active volume manifests",
+      "secondary": "lowest local folder budget usage ratio",
+      "tie_break": "rotate category order between runs",
+      "note": "Do not allow a category to dominate by filling bytes while another category has far fewer committed images."
     }
   },
   "volumes": [
@@ -50,7 +69,7 @@
       "images_path": "Fenrir Wallpapers/",
       "manifest_path": "manifest/index.json",
       "manifest_url": "https://raw.githubusercontent.com/sunxsaturn/Fenrir-Wallpapers-02/main/manifest/index.json",
-      "role": "active-image-volume",
+      "role": "final-fill-image-volume",
       "active": true,
       "acquisition_enabled": true,
       "status": "final-fill"
@@ -62,10 +81,10 @@
       "images_path": "Fenrir Wallpapers/",
       "manifest_path": "manifest/index.json",
       "manifest_url": "https://raw.githubusercontent.com/sunxsaturn/Fenrir-Wallpapers-03/main/manifest/index.json",
-      "role": "active-image-volume",
+      "role": "balanced-overflow-image-volume",
       "active": true,
       "acquisition_enabled": true,
-      "status": "populating"
+      "status": "balanced-populating"
     }
   ],
   "next_volume_repository": "sunxsaturn/Fenrir-Wallpapers-04"
