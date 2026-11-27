@@ -1,62 +1,59 @@
 # Fenrir Wallpaper Library navigation
 
-This repository is the public library hub and Volume 01. The canonical registry is the starting point for all volume-aware clients.
+This repository is the public library hub and Volume 01. Use the live volume registry to determine which image repositories are active and how new acquisitions are coordinated.
 
 ## Start here
 
-- [Library overview and publishing rules](../README.md)
-- [Live volume registry](../manifest/volumes.json)
-- [Volume 01 manifest](../manifest/index.json)
-- [Fenrir ecosystem map](https://github.com/sunxsaturn/Fenrir-Arch/blob/main/docs/PROJECT-MAP.md)
-- [Desktop multi-volume sync guide](https://github.com/sunxsaturn/Fenrir-Dots/blob/main/docs/WALLPAPER-LIBRARY.md)
-- [Private Catalog documentation](https://github.com/sunxsaturn/Fenrir-Wallpaper-Catalog/blob/main/docs/README.md)
+- [Live registry](../manifest/volumes.json) — canonical volume list, active state, acquisition state, storage policy and balancing rules.
+- [Hub README](../README.md) — publishing rules, volume roles, storage limits and desktop use.
+- [Volume 01 manifest](../manifest/index.json) — image records for this repository.
+- [Fenrir Dots multi-volume sync guide](https://github.com/sunxsaturn/Fenrir-Dots/blob/main/docs/WALLPAPER-LIBRARY.md) — local preview and sync workflow.
+- [Fenrir project map](https://github.com/sunxsaturn/Fenrir-Arch/blob/main/docs/PROJECT-MAP.md) — relationship to installer, desktop and private Catalog.
 
-## Registered volumes
+## Current registered image volumes
 
-Do not infer the current collection from this list. The [live registry](../manifest/volumes.json) is authoritative and includes active state, repository, branch, image root and manifest path.
-
-| Volume | Repository | Purpose |
+| Volume | Repository | Role from the live registry |
 |---|---|---|
-| 01 | [Fenrir-Wallpapers](https://github.com/sunxsaturn/Fenrir-Wallpapers) | Hub and original image volume |
-| 02 | [Fenrir-Wallpapers-02](https://github.com/sunxsaturn/Fenrir-Wallpapers-02) | First overflow image volume |
+| 01 | [Fenrir-Wallpapers](https://github.com/sunxsaturn/Fenrir-Wallpapers) | Hub and first image volume; archived from new acquisition |
+| 02 | [Fenrir-Wallpapers-02](https://github.com/sunxsaturn/Fenrir-Wallpapers-02) | Final-fill image volume |
 | 03 | [Fenrir-Wallpapers-03](https://github.com/sunxsaturn/Fenrir-Wallpapers-03) | Balanced overflow image volume |
 
-Future numbered volumes must be registered here. Desktop clients must discover them dynamically and must not hard-code this table.
+This table is navigation, not a substitute for the registry. Volume status, active state and acquisition eligibility can change independently. Clients must not infer active volumes from repository names or hard-code totals.
 
 ## Repository layout
 
-- `Fenrir Wallpapers/` — image files, grouped by canonical category.
-- `manifest/index.json` — committed image metadata, hashes, dimensions, provenance and license attribution.
-- `manifest/volumes.json` — hub registry and library-wide policy.
-- `manifest/publication-approvals.example.json` — template for private, per-image publication decisions.
-- `tools/` — validation and publisher utilities.
-- `.github/workflows/` — CI and coordinated, bounded population workflows.
+- `manifest/volumes.json` — canonical hub registry and library-wide policy.
+- `manifest/index.json` — Volume 01 image manifest.
+- `Fenrir Wallpapers/` — committed image bytes.
+- `tools/` — publisher and importer utilities.
+- `docs/` — project, source and desktop integration guidance.
 
-Each numbered image volume uses the same image-root and manifest conventions. The registry, not repository naming patterns, determines which volumes are part of the active library.
+Each numbered volume keeps its own `manifest/index.json` and image tree. The hub registry determines which volumes are part of the combined collection.
 
-## Public publishing lifecycle
+## Publishing lifecycle
 
-1. The private Catalog records discovery, provenance, license evidence, rights decisions and acceptance.
-2. Public mirroring requires a separate human publication approval for each asset and provider terms that permit redistribution.
-3. The publisher verifies exact source bytes, records attribution and updates the public manifest.
-4. The volume importer commits only allowed image formats that pass the quality, palette, hash and storage checks.
-5. The hub registry exposes the new volume to desktop clients.
+1. Private Catalog candidate discovery and rights review.
+2. Per-asset acquisition authorization and controlled quarantine.
+3. Technical validation, duplicate review and explicit Catalog acceptance.
+4. Separate per-asset public-publication approval with compatible license and provider terms.
+5. Publisher validates exact bytes and metadata, then writes images and manifest to a selected volume.
+6. The hub registry exposes the volume to desktop clients.
 
-Private Catalog databases, quarantine files and publication approval records must never be committed to these public repositories.
+A local Catalog acceptance is not a public publication decision.
 
 ## Local desktop use
 
-With the current Fenrir-Dots release installed:
+With Fenrir Dots installed, preview and synchronize all active registered volumes:
 
 ```bash
 fenrir-wallpaper sync-library --dry-run
 fenrir-wallpaper sync-library
 ```
 
-This discovers all active volumes from the registry and synchronizes their committed images into one configured wallpaper directory. The local client verifies each manifest and image and preserves per-file attribution. It is distinct from the private Catalog's local accepted-collection sync.
+The desktop consumer validates the registry and each manifest before transfer, verifies downloaded bytes, preserves attribution and uses one configured wallpaper directory. This public mirror is separate from private Catalog collection sync.
 
-## Category and manifest conventions
+## Immutable history and source coordination
 
-Canonical image folders are the eight themed categories plus `unsorted`. Keep category directory slugs stable across all volumes. Each manifest record must retain at least its relative path, SHA-256, exact byte size and MIME type; source, creator, credit, attribution and license metadata should remain attached to each item.
+Public Git history retains previously committed image bytes. Removing a file later does not reclaim those historical objects. Review storage ceilings and the shared balancing plan in the registry before scheduling new imports.
 
-Read [the publisher instructions](../README.md#publish-accepted-catalog-assets) before adding assets. Public commits are persistent Git history: deleting a file in a later commit does not reclaim the earlier Git objects.
+Volume 02 and Volume 03 workflows check the other repository's Actions runs before downloading, keeping the Wikimedia acquisition coordinator serialized. Their scheduled windows and hard storage ceilings are recorded in the registry.
