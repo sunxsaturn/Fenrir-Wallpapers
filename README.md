@@ -17,13 +17,13 @@ The current registry lists three active volumes:
 
 | Volume | Repository | Registry role | Acquisition state |
 |---|---|---|---|
-| 01 | [Fenrir-Wallpapers](https://github.com/sunxsaturn/Fenrir-Wallpapers) | Hub and first image volume | Archived; no new acquisition |
-| 02 | [Fenrir-Wallpapers-02](https://github.com/sunxsaturn/Fenrir-Wallpapers-02) | Final-fill image volume | Guarded final-fill windows |
-| 03 | [Fenrir-Wallpapers-03](https://github.com/sunxsaturn/Fenrir-Wallpapers-03) | Balanced overflow image volume | Guarded balanced population |
+| 01 | [Fenrir-Wallpapers](https://github.com/sunxsaturn/Fenrir-Wallpapers) | Hub and archived image volume · 134 images | Closed |
+| 02 | [Fenrir-Wallpapers-02](https://github.com/sunxsaturn/Fenrir-Wallpapers-02) | Published image volume · 1,132 images | Closed |
+| 03 | [Fenrir-Wallpapers-03](https://github.com/sunxsaturn/Fenrir-Wallpapers-03) | Published image volume · 605 images | Closed |
 
-All three are active for desktop synchronization. The registry's `active` field controls what clients sync; `acquisition_enabled` and `status` describe publisher workflow state. Do not infer one from the other.
+All three remain active for desktop synchronization, but every volume is closed to acquisition. The registry's `active` field controls what clients sync; `acquisition_enabled: false` and `status: closed` mean no further population is scheduled.
 
-The manifests in the volume repositories are authoritative for image records and current counts. The hub registry is authoritative for repository discovery and shared policy. Desktop clients must read the registry instead of hard-coding volume names or counts.
+The live manifests contain **1,871 published image records** across the three volumes. The hub registry records a 2026-11-27 snapshot of **1,871 unique SHA-256 identifiers and no cross-volume duplicates**. All nine category folders already exist; the current distribution is intentionally preserved rather than equalized to an arbitrary count. Manifests remain authoritative for live image records and counts; the hub registry is authoritative for repository discovery and population state. Desktop clients must read the registry instead of hard-coding volume names or counts.
 
 ## Public publishing rules
 
@@ -44,21 +44,36 @@ The publisher reads a human-accepted Catalog manifest and exports only assets wi
 
 The publisher does not create rights evidence, authorize downloads, accept assets, or upload private database/quarantine data. Unknown, conflicting, non-commercial, no-derivatives or undocumented rights are excluded.
 
-## Storage and immutable history
+## Population status — closed
 
-- Volume 01 retains its original conservative 900 MiB Git-object budget and is archived.
-- New numbered volumes target 8 GiB of Git-object storage each, subject to the hard repository ceiling and shared library policy.
-- New images are capped at 45 MiB; upload batches remain bounded below GitHub's push limits.
-- Image counts and category balance are measured from the live manifests. The balancing policy uses the current largest global category count and available shared capacity; it is not a fixed historical count.
-- Git history is persistent. Deleting a file in a later commit does not reclaim the original Git objects. Do not repeatedly replace or recompress committed images.
+The public library is now an existing-assets-only archive. **No further source acquisition, count-based balancing, category quotas or new volume creation is scheduled.** The three registered volumes remain active for desktop synchronization.
 
-The [live registry](manifest/volumes.json) contains the current storage policy, active roles, publisher coordination windows and shared balancing rules. Read it before changing acquisition workflows.
+The point-in-time category inventory recorded on 2026-11-27 is:
 
-## Coordinated population
+| Category | Published images |
+|---|---:|
+| Arctic Blue/Violet | 228 |
+| Cinematic Nature | 228 |
+| Cosmic Science Fiction | 228 |
+| Deep Ocean/Bioluminescence | 221 |
+| Monochrome Futuristic Architecture | 228 |
+| Nordic Mythology/Fantasy | 228 |
+| Obsidian Minimalism/Abstract Geometry | 171 |
+| Red/Violet Dark Fantasy | 228 |
+| Unsorted | 111 |
+| **Total** | **1,871** |
 
-The active acquisition workflows are guarded so Volume 02 and Volume 03 do not run Wikimedia population concurrently. Each workflow checks the other public repository's Actions runs before starting; the registry records the scheduled windows and role of each volume.
+These figures are a dated snapshot, not targets. No images are deleted, overwritten, duplicated or moved to make the table look balanced. The remaining 7 / 57 / 117 differences are retained as they are; population is closed without trying to fill them from new sources.
 
-This coordination protects a single serialized source-acquisition policy. Splitting images across GitHub repositories does not change provider rights or request limits.
+The scheduled/dispatch acquisition workflows for Volumes 02 and 03 have been removed. The hub registry now marks all three volumes active for sync and closed for acquisition. There is no Volume 04 plan.
+
+For a current read-only manifest audit, use `fenrir-wallpaper audit-library --json` from a current Fenrir Dots release. The audit reads the hub registry and each active manifest; it does not fetch image bytes or inspect a local directory. The desktop sync client verifies image bytes separately when downloading. Use `fenrir-wallpaper sync-library --dry-run` before an explicitly confirmed local synchronization.
+
+## Immutable history and rights
+
+Git history is persistent. Existing content-addressed files and their manifests are retained. Do not repeatedly replace, recompress, move or delete committed images. Existing redistribution terms and attribution requirements continue to apply; publication does not grant additional rights.
+
+`docs/POPULATION-STATUS.md` records the closure and inventory snapshot. The live registry remains the source of truth for active repositories and population state.
 
 ## Fenrir integration
 
