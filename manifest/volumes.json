@@ -68,22 +68,24 @@
     }
   ],
   "palette_policy": {
-    "id": "fenrir-wallpaper-palette-v2",
+    "id": "fenrir-wallpaper-palette-v3",
     "preferred": [
-      "blue",
       "red",
       "purple",
+      "blue",
+      "white",
       "black",
       "violet"
     ],
     "tolerated": [
-      "green"
+      "green",
+      "neutral",
+      "pink"
     ],
     "excluded": [
       "yellow",
-      "brown",
       "orange",
-      "pink"
+      "brown"
     ],
     "evaluation": "decoded-image-pixels",
     "search_terms_are_not_rights_or_color_evidence": true
