@@ -59,17 +59,15 @@
     },
     "balancing_policy": {
       "scope": "all committed wallpapers across all active registered volume manifests",
-      "target": "current maximum globally committed category image count",
-      "current_reference_count": 185,
-      "reference_category": "cinematic-nature",
-      "rule": "Only download globally unique images for categories below the current largest category count; stop each category exactly at that count.",
+      "target": "live maximum global image count across all active categories",
+      "rule": "After each acquisition batch begins, calculate the largest category count from all active volume manifests. Acquire only in lower-count categories until they match the current maximum; recompute after every batch.",
       "no_deletion": true,
       "selection_order": [
         "lowest global category count",
         "lowest local folder storage usage ratio",
         "rotating ties"
       ],
-      "note": "Recalculate the maximum global category count at the start of every acquisition batch. Image counts are the primary equality constraint; per-folder and per-repository byte budgets remain hard safety limits. Existing images are preserved. Reallocate future volume byte budgets only when needed to keep every category able to reach the shared count target.",
+      "note": "There is no fixed image-count target. The largest live category determines the equality level. Continue filling all lower-count categories to that level, using per-folder and per-repository byte limits only as safety ceilings. Preserve all existing images. Historical counts are retained only as a baseline and never used as an active target.",
       "baseline_global_image_count": 1266,
       "baseline_category_counts": {
         "nordic-mythology-fantasy": 162,
@@ -82,17 +80,21 @@
         "obsidian-minimalism-abstract-geometry": 80,
         "unsorted": 43
       },
-      "additional_images_to_equalize": 399,
-      "category_gaps_to_185": {
-        "nordic-mythology-fantasy": 23,
-        "cinematic-nature": 0,
-        "cosmic-science-fiction": 8,
-        "arctic-blue-violet": 87,
-        "monochrome-futuristic-architecture": 19,
-        "red-violet-dark-fantasy": 2,
-        "deep-ocean-bioluminescence": 13,
-        "obsidian-minimalism-abstract-geometry": 105,
-        "unsorted": 142
+      "historical_baseline": {
+        "recorded_on": "2026-11-26",
+        "total_images": 1266,
+        "category_counts": {
+          "nordic-mythology-fantasy": 162,
+          "cinematic-nature": 185,
+          "cosmic-science-fiction": 177,
+          "arctic-blue-violet": 98,
+          "monochrome-futuristic-architecture": 166,
+          "red-violet-dark-fantasy": 183,
+          "deep-ocean-bioluminescence": 172,
+          "obsidian-minimalism-abstract-geometry": 80,
+          "unsorted": 43
+        },
+        "description": "Historical snapshot only; never used as the active target."
       }
     }
   },
