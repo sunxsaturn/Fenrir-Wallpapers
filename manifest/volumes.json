@@ -22,8 +22,8 @@
       "Volume 03 runs longer serialized fill windows at 00:17 and 12:17 UTC only when Volume 02 has no active or queued acquisition run.",
       "Both volume workflows query the other public repository's Actions runs before downloading; each retains its own hard 8 GiB repository ceiling and the common Commons pacing policy.",
       "Volume 02's Arctic Blue/Violet folder has exceeded its local target; new Arctic overflow is routed into Volume 03 without rewriting or duplicating the historical Volume 02 files.",
-      "Volume 03 provides 880 MiB per category as overflow capacity for all nine categories; total planned folder capacity is 7.734 GiB and the 8 GiB repository-wide guard remains the hard stop.",
-      "Both importers now rank categories by globally committed unique image count across registered active volumes, then by local folder storage usage, with rotating ties."
+      "Current global image-count reference is 185 (Cinematic Nature), calculated from the committed repository trees on 2026-11-26/27. Importers download only for categories below the largest current global count.",
+      "No wallpaper images are deleted, overwritten, or moved. Existing volumes remain intact; new images fill lower-count categories, using Volume 03 as overflow when Volume 02 reaches its own storage ceiling."
     ],
     "folder_targets_bytes": {
       "themed_categories": 734003200,
@@ -35,11 +35,20 @@
       "sunxsaturn/Fenrir-Wallpapers-02": {
         "themed_categories": 734003200,
         "unsorted": 536870912,
-        "note": "Preserve the existing Volume 02 folder targets; the 8 GiB repository guard is close and remains authoritative."
+        "note": "Existing Volume 02 category ceilings are preserved; the 8 GiB repository hard stop may prevent some underfilled categories from reaching the global count target."
       },
       "sunxsaturn/Fenrir-Wallpapers-03": {
-        "all_categories": 922746880,
-        "note": "880 MiB per category across all nine folders, reserving approximately 272 MiB below the 8 GiB hard repository ceiling."
+        "nordic-mythology-fantasy": 471859200,
+        "cinematic-nature": 471859200,
+        "cosmic-science-fiction": 471859200,
+        "arctic-blue-violet": 1258291200,
+        "monochrome-futuristic-architecture": 471859200,
+        "red-violet-dark-fantasy": 471859200,
+        "deep-ocean-bioluminescence": 471859200,
+        "obsidian-minimalism-abstract-geometry": 1101004800,
+        "unsorted": 2306867200,
+        "total_planned_bytes": 7507804160,
+        "note": "Count-balanced overflow targets sized for the current global gaps. Total folder ceilings leave roughly 1 GiB below the 8 GiB repository hard stop."
       }
     },
     "selection": {
@@ -47,6 +56,20 @@
       "secondary": "lowest local folder budget usage ratio",
       "tie_break": "rotate category order between runs",
       "note": "Do not allow a category to dominate by filling bytes while another category has far fewer committed images."
+    },
+    "balancing_policy": {
+      "scope": "all committed wallpapers across all active registered volume manifests",
+      "target": "current maximum globally committed category image count",
+      "current_reference_count": 185,
+      "reference_category": "cinematic-nature",
+      "rule": "Only download for categories below the current largest category count; stop a category at that count.",
+      "no_deletion": true,
+      "selection_order": [
+        "lowest global category count",
+        "lowest local folder storage usage ratio",
+        "rotating ties"
+      ],
+      "note": "The target is recalculated at the start of each acquisition batch. Folder/repository storage ceilings remain hard stops; never remove or rewrite existing images."
     }
   },
   "volumes": [
