@@ -2,95 +2,20 @@
   "schema": "org.fenrir.wallpaper-library-volumes.v1",
   "library_id": "fenrir-wallpapers",
   "hub_repository": "sunxsaturn/Fenrir-Wallpapers",
-  "updated_at": "2026-11-26",
+  "updated_at": "2026-11-27",
   "policy": {
-    "initial_volume_target_bytes": 943718400,
-    "future_volume_target_bytes": 8589934592,
     "github_recommended_repository_size_bytes": 10737418240,
     "max_new_image_bytes": 47185920,
     "max_upload_batch_bytes": 734003200,
     "notes": [
-      "The first volume remains at its original conservative budget.",
-      "Future volumes target 8 GiB of Git object storage.",
-      "Only a single serialized Commons acquisition coordinator may fetch source metadata or image bytes.",
-      "Per-image redistribution terms and attribution are mandatory.",
-      "Per-volume image counts are read from each linked live manifest; the registry does not duplicate counts.",
-      "Volume 02 acquisition batches are capped at 700 MiB and remain below GitHub's 2 GB push limit.",
-      "Final allocation phase lowers the target for previously underfilled themed folders to 700 MiB because several other categories already exceed 1 GiB; this keeps all folders within the remaining 8 GiB volume budget.",
-      "Volume 02 target: 700 MiB per themed category and 512 MiB for Unsorted; least-filled-first selection.",
-      "Volume 02 performs guarded final-fill windows at 06:43 and 18:43 UTC only when Volume 03 has no active or queued acquisition run.",
-      "Volume 03 runs longer serialized fill windows at 00:17 and 12:17 UTC only when Volume 02 has no active or queued acquisition run.",
-      "Both volume workflows query the other public repository's Actions runs before downloading; each retains its own hard 8 GiB repository ceiling and the common Commons pacing policy.",
-      "Volume 02's Arctic Blue/Violet folder has exceeded its local target; new Arctic overflow is routed into Volume 03 without rewriting or duplicating the historical Volume 02 files.",
-      "The current balancing reference is 185 images per category, with Cinematic Nature setting the target as of 2026-11-26. Importers recalculate the largest category count at each batch and fill every lower-count category to that shared count.",
-      "No wallpaper images are deleted, overwritten, or moved. Shared storage is allocated dynamically to keep global image counts equal."
-    ],
-    "folder_targets_bytes": {
-      "themed_categories": 734003200,
-      "unsorted": 536870912,
-      "selection": "least-filled folders first; rotating tie order between acquisition runs",
-      "note": "Themed category folders use a 700 MiB target; Unsorted uses 512 MiB. These targets are subordinate to the 8 GiB per-volume ceiling. Existing folder contents above target remain unchanged."
-    },
-    "volume_specific_folder_targets_bytes": {
-      "sunxsaturn/Fenrir-Wallpapers-02": {
-        "themed_categories": 734003200,
-        "unsorted": 536870912,
-        "note": "Existing Volume 02 category ceilings are preserved; the 8 GiB repository hard stop may prevent some underfilled categories from reaching the global count target."
-      },
-      "sunxsaturn/Fenrir-Wallpapers-03": {
-        "shared_repository_budget_bytes": 8589934592,
-        "per_category_hard_limit_bytes": null,
-        "allocation": "dynamic count-equalized allocation using observed average image bytes",
-        "safety_reserve_bytes": 536870912,
-        "note": "No fixed folder quotas. The shared 8 GiB repository capacity is dynamically allocated to preserve equal global image counts; category average file sizes estimate the storage required per image increment."
-      }
-    },
-    "selection": {
-      "primary": "lowest globally committed image count per category across active volume manifests",
-      "secondary": "lowest local folder budget usage ratio",
-      "tie_break": "rotate category order between runs",
-      "note": "Do not allow a category to dominate by filling bytes while another category has far fewer committed images."
-    },
-    "balancing_policy": {
-      "scope": "all committed wallpapers across all active registered volume manifests",
-      "target": "maximum common global image count affordable within remaining shared repository capacity",
-      "rule": "Each acquisition batch computes the highest image count that all categories can reach using remaining repository bytes, weighted by each category's observed average image size. Only categories below that common count are populated; no category advances beyond it.",
-      "no_deletion": true,
-      "selection_order": [
-        "lowest global category count",
-        "lowest local folder storage usage ratio",
-        "rotating ties"
-      ],
-      "note": "No fixed count or per-folder byte quotas. Shared repository capacity is allocated to preserve equal image counts, using observed per-category average image size and a 512 MiB safety reserve for repository metadata and size variance. Stop when no additional complete equal-count round fits or eligible sources are exhausted. Preserve all existing images.",
-      "baseline_global_image_count": 1266,
-      "baseline_category_counts": {
-        "nordic-mythology-fantasy": 162,
-        "cinematic-nature": 185,
-        "cosmic-science-fiction": 177,
-        "arctic-blue-violet": 98,
-        "monochrome-futuristic-architecture": 166,
-        "red-violet-dark-fantasy": 183,
-        "deep-ocean-bioluminescence": 172,
-        "obsidian-minimalism-abstract-geometry": 80,
-        "unsorted": 43
-      },
-      "historical_baseline": {
-        "recorded_on": "2026-11-26",
-        "total_images": 1266,
-        "category_counts": {
-          "nordic-mythology-fantasy": 162,
-          "cinematic-nature": 185,
-          "cosmic-science-fiction": 177,
-          "arctic-blue-violet": 98,
-          "monochrome-futuristic-architecture": 166,
-          "red-violet-dark-fantasy": 183,
-          "deep-ocean-bioluminescence": 172,
-          "obsidian-minimalism-abstract-geometry": 80,
-          "unsorted": 43
-        },
-        "description": "Historical snapshot only; never used as the active target."
-      }
-    }
+      "Public population is closed; the published image inventory is retained as-is.",
+      "No further source acquisition, image-count equalization, category quota, or new-volume expansion is scheduled.",
+      "All three registered volumes remain active for desktop synchronization.",
+      "Image files and their content-addressed paths are immutable; do not delete, overwrite, duplicate, or move existing files.",
+      "Per-image redistribution terms, source provenance and attribution remain mandatory for all existing records.",
+      "Live volume manifests are authoritative for image counts, categories and file integrity metadata.",
+      "A manifest-only audit verifies registry and manifest consistency; downloaded image bytes are verified separately by the desktop sync client."
+    ]
   },
   "volumes": [
     {
@@ -100,10 +25,10 @@
       "images_path": "Fenrir Wallpapers/",
       "manifest_path": "manifest/index.json",
       "manifest_url": "https://raw.githubusercontent.com/sunxsaturn/Fenrir-Wallpapers/main/manifest/index.json",
-      "role": "hub-and-first-image-volume",
+      "role": "hub-and-archived-image-volume",
       "active": true,
       "acquisition_enabled": false,
-      "status": "full"
+      "status": "closed"
     },
     {
       "id": "volume-02",
@@ -112,10 +37,10 @@
       "images_path": "Fenrir Wallpapers/",
       "manifest_path": "manifest/index.json",
       "manifest_url": "https://raw.githubusercontent.com/sunxsaturn/Fenrir-Wallpapers-02/main/manifest/index.json",
-      "role": "final-fill-image-volume",
+      "role": "published-image-volume",
       "active": true,
-      "acquisition_enabled": true,
-      "status": "final-fill"
+      "acquisition_enabled": false,
+      "status": "closed"
     },
     {
       "id": "volume-03",
@@ -124,11 +49,34 @@
       "images_path": "Fenrir Wallpapers/",
       "manifest_path": "manifest/index.json",
       "manifest_url": "https://raw.githubusercontent.com/sunxsaturn/Fenrir-Wallpapers-03/main/manifest/index.json",
-      "role": "balanced-overflow-image-volume",
+      "role": "published-image-volume",
       "active": true,
-      "acquisition_enabled": true,
-      "status": "balanced-populating"
+      "acquisition_enabled": false,
+      "status": "closed"
     }
   ],
-  "next_volume_repository": "sunxsaturn/Fenrir-Wallpapers-04"
+  "population": {
+    "state": "closed",
+    "mode": "existing-assets-only",
+    "fixed_image_count_target": null,
+    "closed_at": "2026-11-27",
+    "summary": "All currently committed and manifested public wallpapers are retained and remain available for desktop synchronization. Further image acquisition and count-based category balancing are disabled.",
+    "snapshot": {
+      "manifest_records": 1871,
+      "unique_content_hashes": 1871,
+      "duplicate_content_hashes": 0,
+      "category_counts": {
+        "arctic-blue-violet": 228,
+        "cinematic-nature": 228,
+        "cosmic-science-fiction": 228,
+        "deep-ocean-bioluminescence": 221,
+        "monochrome-futuristic-architecture": 228,
+        "nordic-mythology-fantasy": 228,
+        "obsidian-minimalism-abstract-geometry": 171,
+        "red-violet-dark-fantasy": 228,
+        "unsorted": 111
+      },
+      "description": "Point-in-time snapshot from 2026-11-27. Live manifests remain authoritative."
+    }
+  }
 }
