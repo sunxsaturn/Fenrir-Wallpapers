@@ -17,7 +17,10 @@
       "Per-volume image counts are read from each linked live manifest; the registry does not duplicate counts.",
       "Volume 02 acquisition batches are capped at 700 MiB and remain below GitHub's 2 GB push limit.",
       "Final allocation phase lowers the target for previously underfilled themed folders to 700 MiB because several other categories already exceed 1 GiB; this keeps all folders within the remaining 8 GiB volume budget.",
-      "Volume 02 target: 700 MiB per themed category and 512 MiB for Unsorted; least-filled-first selection."
+      "Volume 02 target: 700 MiB per themed category and 512 MiB for Unsorted; least-filled-first selection.",
+      "Volume 02 automatic acquisition is paused; its existing images and manifest are preserved and manual runs remain available.",
+      "Volume 03 is the sole scheduled Wikimedia Commons acquisition coordinator, preventing independent scheduled downloads across volumes.",
+      "Volume 03 uses the same 8 GiB repository ceiling, 45 MiB per-image ceiling, 700 MiB themed-folder targets and 512 MiB Unsorted target, subject to source licensing and attribution checks."
     ],
     "folder_targets_bytes": {
       "themed_categories": 734003200,
@@ -50,7 +53,19 @@
       "active": true,
       "acquisition_enabled": true,
       "status": "populating"
+    },
+    {
+      "id": "volume-03",
+      "repository": "sunxsaturn/Fenrir-Wallpapers-03",
+      "branch": "main",
+      "images_path": "Fenrir Wallpapers/",
+      "manifest_path": "manifest/index.json",
+      "manifest_url": "https://raw.githubusercontent.com/sunxsaturn/Fenrir-Wallpapers-03/main/manifest/index.json",
+      "role": "active-image-volume",
+      "active": true,
+      "acquisition_enabled": true,
+      "status": "populating"
     }
   ],
-  "next_volume_repository": "sunxsaturn/Fenrir-Wallpapers-03"
+  "next_volume_repository": "sunxsaturn/Fenrir-Wallpapers-04"
 }
