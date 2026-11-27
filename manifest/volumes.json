@@ -8,7 +8,7 @@
     "target_unique_images": 5000,
     "published_unique_images": 0,
     "legacy_images_reused": 0,
-    "category_balance": "Five categories contain 455 images and six categories contain 454 images because 5000 is not divisible by 11."
+    "category_balance": "Six categories contain 455 images and five categories contain 454 images because 5000 is not divisible by 11."
   },
   "categories": [
     {
@@ -39,7 +39,7 @@
     {
       "id": "astronomy",
       "name": "Astronomy",
-      "target_count": 454
+      "target_count": 455
     },
     {
       "id": "planets",
