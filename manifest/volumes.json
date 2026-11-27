@@ -51,8 +51,8 @@
       "manifest_url": "https://raw.githubusercontent.com/sunxsaturn/Fenrir-Wallpapers-02/main/manifest/index.json",
       "role": "active-image-volume",
       "active": true,
-      "acquisition_enabled": true,
-      "status": "populating"
+      "acquisition_enabled": false,
+      "status": "paused"
     },
     {
       "id": "volume-03",
