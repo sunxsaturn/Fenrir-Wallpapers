@@ -15,7 +15,8 @@
       "Per-image redistribution terms, source provenance and attribution remain mandatory for all existing records.",
       "Live volume manifests are authoritative for image counts, categories and file integrity metadata.",
       "A manifest-only audit verifies registry and manifest consistency; downloaded image bytes are verified separately by the desktop sync client."
-    ]
+    ],
+    "github_repository_size_safety_limit_bytes": 10737418240
   },
   "volumes": [
     {
