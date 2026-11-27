@@ -1,5 +1,7 @@
 # Fenrir Wallpapers
 
+**Library navigation:** [Documentation index](docs/README.md) · [Live volume registry](manifest/volumes.json) · [Fenrir ecosystem map](https://github.com/sunxsaturn/Fenrir-Arch/blob/main/docs/PROJECT-MAP.md) · [Desktop sync guide](https://github.com/sunxsaturn/Fenrir-Dots/blob/main/docs/WALLPAPER-LIBRARY.md)
+
 The GitHub-hosted, rights-reviewed wallpaper collection for Fenrir Desktop.
 
 **Collection target:** publish the largest practical number of qualifying wallpapers while keeping the complete Git repository below a conservative **900 MiB** budget. There is no fixed image count; the count depends on actual file sizes. Individual images are capped at **45 MiB** to stay below GitHub's 100 MB per-file rejection threshold.
