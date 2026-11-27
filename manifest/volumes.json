@@ -18,9 +18,10 @@
       "Volume 02 acquisition batches are capped at 700 MiB and remain below GitHub's 2 GB push limit.",
       "Final allocation phase lowers the target for previously underfilled themed folders to 700 MiB because several other categories already exceed 1 GiB; this keeps all folders within the remaining 8 GiB volume budget.",
       "Volume 02 target: 700 MiB per themed category and 512 MiB for Unsorted; least-filled-first selection.",
-      "Volume 02 automatic acquisition is paused; its existing images and manifest are preserved and manual runs remain available.",
-      "Volume 03 is the sole scheduled Wikimedia Commons acquisition coordinator, preventing independent scheduled downloads across volumes.",
-      "Volume 03 uses the same 8 GiB repository ceiling, 45 MiB per-image ceiling, 700 MiB themed-folder targets and 512 MiB Unsorted target, subject to source licensing and attribution checks."
+      "Volume 03 uses the same 8 GiB repository ceiling, 45 MiB per-image ceiling, 700 MiB themed-folder targets and 512 MiB Unsorted target, subject to source licensing and attribution checks.",
+      "Volume 02 performs guarded final-fill windows at 06:43 and 18:43 UTC only when Volume 03 has no active or queued acquisition run.",
+      "Volume 03 runs longer serialized fill windows at 00:17 and 12:17 UTC only when Volume 02 has no active or queued acquisition run.",
+      "Both volume workflows query the other public repository's Actions runs before downloading; each retains its own hard 8 GiB repository ceiling and the common Commons pacing policy."
     ],
     "folder_targets_bytes": {
       "themed_categories": 734003200,
@@ -51,8 +52,8 @@
       "manifest_url": "https://raw.githubusercontent.com/sunxsaturn/Fenrir-Wallpapers-02/main/manifest/index.json",
       "role": "active-image-volume",
       "active": true,
-      "acquisition_enabled": false,
-      "status": "paused"
+      "acquisition_enabled": true,
+      "status": "final-fill"
     },
     {
       "id": "volume-03",
