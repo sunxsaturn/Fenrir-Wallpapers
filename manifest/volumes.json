@@ -1,0 +1,149 @@
+{
+  "schema": "org.fenrir.wallpaper-library-volumes.v2",
+  "library_id": "fenrir-wallpapers-v2",
+  "generation": "fresh-2026-11-27",
+  "updated_at": "2026-11-27",
+  "population": {
+    "state": "building",
+    "target_unique_images": 5000,
+    "published_unique_images": 0,
+    "legacy_images_reused": 0,
+    "category_balance": "Five categories contain 455 images and six categories contain 454 images because 5000 is not divisible by 11."
+  },
+  "categories": [
+    {
+      "id": "nordic-landscapes",
+      "name": "Nordic Landscapes",
+      "target_count": 455
+    },
+    {
+      "id": "medieval-landscapes",
+      "name": "Medieval Landscapes",
+      "target_count": 455
+    },
+    {
+      "id": "fantasy",
+      "name": "Fantasy",
+      "target_count": 455
+    },
+    {
+      "id": "epic-battles",
+      "name": "Epic Battles",
+      "target_count": 455
+    },
+    {
+      "id": "mountains",
+      "name": "Mountains",
+      "target_count": 455
+    },
+    {
+      "id": "astronomy",
+      "name": "Astronomy",
+      "target_count": 454
+    },
+    {
+      "id": "planets",
+      "name": "Planets",
+      "target_count": 454
+    },
+    {
+      "id": "knights-in-battle",
+      "name": "Knights in Battle",
+      "target_count": 454
+    },
+    {
+      "id": "swords",
+      "name": "Swords",
+      "target_count": 454
+    },
+    {
+      "id": "magic",
+      "name": "Magic",
+      "target_count": 454
+    },
+    {
+      "id": "nordic-mythology",
+      "name": "Nordic Mythology",
+      "target_count": 454
+    }
+  ],
+  "palette_policy": {
+    "id": "fenrir-wallpaper-palette-v2",
+    "preferred": [
+      "blue",
+      "red",
+      "purple",
+      "black",
+      "violet"
+    ],
+    "tolerated": [
+      "green"
+    ],
+    "excluded": [
+      "yellow",
+      "brown",
+      "orange",
+      "pink"
+    ],
+    "evaluation": "decoded-image-pixels",
+    "search_terms_are_not_rights_or_color_evidence": true
+  },
+  "rights_policy": {
+    "accepted": [
+      "Public Domain",
+      "CC0"
+    ],
+    "rejected_or_manual_review": [
+      "unknown",
+      "CC BY",
+      "CC BY-SA",
+      "CC BY-NC",
+      "CC BY-ND",
+      "all other copyrighted or unclear terms"
+    ],
+    "preserve_source_creator_and_rights_evidence": true
+  },
+  "legacy_exclusions": {
+    "expected_unique_sha256_count": 1871,
+    "storage": "private Fenrir Wallpaper Catalog exclusion set",
+    "never_publish_exclusion_hashes_in_public_gallery": true
+  },
+  "volumes": [
+    {
+      "id": "volume-01",
+      "repository": "sunxsaturn/Fenrir-Wallpapers",
+      "branch": "main",
+      "images_path": "images/",
+      "manifest_path": "manifest/index.json",
+      "active": true,
+      "role": "hub-and-image-volume"
+    },
+    {
+      "id": "volume-02",
+      "repository": "sunxsaturn/Fenrir-Wallpapers-02",
+      "branch": "main",
+      "images_path": "images/",
+      "manifest_path": "manifest/index.json",
+      "active": true,
+      "role": "image-volume"
+    },
+    {
+      "id": "volume-03",
+      "repository": "sunxsaturn/Fenrir-Wallpapers-03",
+      "branch": "main",
+      "images_path": "images/",
+      "manifest_path": "manifest/index.json",
+      "active": true,
+      "role": "image-volume"
+    }
+  ],
+  "installer_contract": {
+    "automatic_download": true,
+    "separate_downloader": false,
+    "require_complete_manifest_preflight": true,
+    "sha256_and_decoded_image_verification": true,
+    "no_overwrite": true,
+    "resume_interrupted_downloads": true,
+    "final_missing_count_must_be_zero": true
+  }
+}
