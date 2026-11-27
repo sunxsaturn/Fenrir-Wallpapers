@@ -23,7 +23,7 @@
       "Both volume workflows query the other public repository's Actions runs before downloading; each retains its own hard 8 GiB repository ceiling and the common Commons pacing policy.",
       "Volume 02's Arctic Blue/Violet folder has exceeded its local target; new Arctic overflow is routed into Volume 03 without rewriting or duplicating the historical Volume 02 files.",
       "The current balancing reference is 185 images per category, with Cinematic Nature setting the target as of 2026-11-26. Importers recalculate the largest category count at each batch and fill every lower-count category to that shared count.",
-      "No wallpaper images are deleted, overwritten, or moved. Every category is populated to the current largest global category count; volume byte allocations may be rebalanced if required to reach equal counts."
+      "No wallpaper images are deleted, overwritten, or moved. Shared storage is allocated dynamically to keep global image counts equal."
     ],
     "folder_targets_bytes": {
       "themed_categories": 734003200,
@@ -38,17 +38,11 @@
         "note": "Existing Volume 02 category ceilings are preserved; the 8 GiB repository hard stop may prevent some underfilled categories from reaching the global count target."
       },
       "sunxsaturn/Fenrir-Wallpapers-03": {
-        "nordic-mythology-fantasy": 471859200,
-        "cinematic-nature": 471859200,
-        "cosmic-science-fiction": 471859200,
-        "arctic-blue-violet": 1258291200,
-        "monochrome-futuristic-architecture": 471859200,
-        "red-violet-dark-fantasy": 471859200,
-        "deep-ocean-bioluminescence": 471859200,
-        "obsidian-minimalism-abstract-geometry": 1101004800,
-        "unsorted": 2306867200,
-        "total_planned_bytes": 7497318400,
-        "note": "Six regular category folders at 450 MiB, Arctic at 1,200 MiB, Obsidian at 1,050 MiB and Unsorted at 2,200 MiB; 6.98 GiB total, leaving about 1 GiB below the 8 GiB hard ceiling."
+        "shared_repository_budget_bytes": 8589934592,
+        "per_category_hard_limit_bytes": null,
+        "allocation": "dynamic count-equalized allocation using observed average image bytes",
+        "safety_reserve_bytes": 536870912,
+        "note": "No fixed folder quotas. The shared 8 GiB repository capacity is dynamically allocated to preserve equal global image counts; category average file sizes estimate the storage required per image increment."
       }
     },
     "selection": {
@@ -59,15 +53,15 @@
     },
     "balancing_policy": {
       "scope": "all committed wallpapers across all active registered volume manifests",
-      "target": "live maximum global image count across all active categories",
-      "rule": "After each acquisition batch begins, calculate the largest category count from all active volume manifests. Acquire only in lower-count categories until they match the current maximum; recompute after every batch.",
+      "target": "maximum common global image count affordable within remaining shared repository capacity",
+      "rule": "Each acquisition batch computes the highest image count that all categories can reach using remaining repository bytes, weighted by each category's observed average image size. Only categories below that common count are populated; no category advances beyond it.",
       "no_deletion": true,
       "selection_order": [
         "lowest global category count",
         "lowest local folder storage usage ratio",
         "rotating ties"
       ],
-      "note": "There is no fixed image-count target. The largest live category determines the equality level. Continue filling all lower-count categories to that level, using per-folder and per-repository byte limits only as safety ceilings. Preserve all existing images. Historical counts are retained only as a baseline and never used as an active target.",
+      "note": "No fixed count or per-folder byte quotas. Shared repository capacity is allocated to preserve equal image counts, using observed per-category average image size and a 512 MiB safety reserve for repository metadata and size variance. Stop when no additional complete equal-count round fits or eligible sources are exhausted. Preserve all existing images.",
       "baseline_global_image_count": 1266,
       "baseline_category_counts": {
         "nordic-mythology-fantasy": 162,
