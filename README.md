@@ -6,7 +6,7 @@ This repository is dedicated exclusively to the public Fenrir wallpaper gallery 
 
 - Target: exactly 5,000 unique published images across all active volumes.
 - Categories: Nordic Landscapes, Medieval Landscapes, Fantasy, Epic Battles, Mountains, Astronomy, Planets, Knights in Battle, Swords, Magic and Nordic Mythology.
-- Category quotas: five categories with 455 images and six with 454 images.
+- Category quotas: six categories with 455 images and five with 454 images.
 - Only independently verified Public Domain or CC0 images may be published.
 - Preserve the creator, original source, source page, rights evidence, license identifier, license URL, dimensions, byte count, dominant colors and SHA-256.
 - Exclude all 1,871 legacy public image hashes.
