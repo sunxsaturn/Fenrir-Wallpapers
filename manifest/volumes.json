@@ -22,8 +22,8 @@
       "Volume 03 runs longer serialized fill windows at 00:17 and 12:17 UTC only when Volume 02 has no active or queued acquisition run.",
       "Both volume workflows query the other public repository's Actions runs before downloading; each retains its own hard 8 GiB repository ceiling and the common Commons pacing policy.",
       "Volume 02's Arctic Blue/Violet folder has exceeded its local target; new Arctic overflow is routed into Volume 03 without rewriting or duplicating the historical Volume 02 files.",
-      "Current global image-count reference is 185 (Cinematic Nature), calculated from the committed repository trees on 2026-11-26/27. Importers download only for categories below the largest current global count.",
-      "No wallpaper images are deleted, overwritten, or moved. Existing volumes remain intact; new images fill lower-count categories, using Volume 03 as overflow when Volume 02 reaches its own storage ceiling."
+      "The 185-image Cinematic Nature count recorded on 2026-11-26 is a historical balancing reference, not a hard stop; current global category counts determine acquisition priority.",
+      "No wallpaper images are deleted, overwritten, or moved. Continue adding globally unique, eligible images to underfilled categories until each category's own byte allocation or its volume's hard 8 GiB object-storage ceiling is reached."
     ],
     "folder_targets_bytes": {
       "themed_categories": 734003200,
@@ -59,17 +59,17 @@
     },
     "balancing_policy": {
       "scope": "all committed wallpapers across all active registered volume manifests",
-      "target": "current maximum globally committed category image count",
+      "target": "per-category byte allocation, with global image count used to prioritize the least-populated category",
       "current_reference_count": 185,
       "reference_category": "cinematic-nature",
-      "rule": "Only download for categories below the current largest category count; stop a category at that count.",
+      "rule": "Continue downloading unique eligible images into each category; counts set priority, while category and repository byte ceilings are the hard stops.",
       "no_deletion": true,
       "selection_order": [
         "lowest global category count",
         "lowest local folder storage usage ratio",
         "rotating ties"
       ],
-      "note": "The target is recalculated at the start of each acquisition batch. Folder/repository storage ceilings remain hard stops; never remove or rewrite existing images.",
+      "note": "The previous maximum count is a priority reference only, not a cap. Recalculate global category counts at each acquisition batch and prioritize the least-populated categories. Stop a folder only at its configured byte budget or a repository's 8 GiB hard ceiling. Never remove or rewrite existing images.",
       "baseline_global_image_count": 1266,
       "baseline_category_counts": {
         "nordic-mythology-fantasy": 162,
