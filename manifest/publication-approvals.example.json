@@ -1,5 +1,0 @@
-{
-  "schema": "org.fenrir.publication-approvals.v1",
-  "notice": "Start with an empty array. Add an entry only after a human has verified the specific image license and confirmed that provider terms permit public redistribution and mirroring.",
-  "approvals": []
-}
