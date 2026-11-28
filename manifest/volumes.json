@@ -2,7 +2,7 @@
   "schema": "org.fenrir.wallpaper-library-volumes.v2",
   "library_id": "fenrir-wallpapers-v2",
   "generation": "fresh-2026-11-27",
-  "updated_at": "2026-11-27",
+  "updated_at": "2026-11-28",
   "population": {
     "state": "building",
     "target_unique_images": 5000,
@@ -68,7 +68,7 @@
     }
   ],
   "palette_policy": {
-    "id": "fenrir-wallpaper-palette-v3",
+    "id": "fenrir-wallpaper-palette-advisory-v4",
     "preferred": [
       "red",
       "purple",
@@ -82,12 +82,8 @@
       "neutral",
       "pink"
     ],
-    "excluded": [
-      "yellow",
-      "orange",
-      "brown"
-    ],
-    "evaluation": "decoded-image-pixels",
+    "excluded": [],
+    "evaluation": "descriptive-only; does not filter images",
     "search_terms_are_not_rights_or_color_evidence": true
   },
   "rights_policy": {
